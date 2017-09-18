@@ -1,0 +1,47 @@
+\chapter{Uvod}
+
+\lettrine[lines=4]{E} {instein} je 1915. godine objavio opću teoriju relativnosti, za koju možemo reći da je jedna od najelegantnijih teorija u fizici. Od svojih početaka je uspjela promijeniti način na koji vidimo svijet oko sebe. Prostor više nije nezavisan od vremena, nego zajedno čine jedinstvenu cjelinu. Zakrivljenost prostor-vremena je postala očita činjenica te je povezujući materiju i geometriju na veoma elegantan način, opća teorija relativnosti otvorila vrata ne samo novim teorijama, poput kvantne gravitacije i teorije struna, nego je otvorila vrata novim tehnologijama koje su promijenile naš način života (GPS). Također je dala bazu za ono što će uvelike postati predmet istraživanja same opće teorije relativnosti - crne rupe i astrofizički fenomeni.
+
+Često ljudi zaziru od opće teorije relativnosti zato jer je matematički formalizam koji ju opisuje, doduše na veoma elegantan način, poprilično složen. Opisi preko tenzora su veoma složeni i često nisu intuitivni, što obično rezultira time da ljudi odustanu od detaljnog studiranja elegancije same teorije.
+
+\newpage
+
+Vrhunac Einsteinove teorije relativnosti zasigurno leži u Einsteinovim jednadžbama polja
+
+\begin{equation}
+R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}+g_{\mu\nu}\Lambda=\frac{8\pi G}{c^4}T_{\mu\nu}
+\label{eq:EinsteinFeildEq}
+\medskip
+\end{equation}
+%
+koje na veoma elegantan način povezuju dvije, naizgled oprečne, stvari: materiju danu tenzorom energije-impulsa\footnote{Engl. \textit{stress energy tensor}} $T_{\mu\nu}$, te prostor opisan kombinacijom Riccijevog tenzora, Riccijevog skalara i metrike prostora\footnote{Riccijev tenzor i skalar se mogu skraćeno zapisati kao Einsteinov tenzor $G_{\mu\nu}$.}.
+
+Iako je dio znanstvene zajednice bio skeptičan oko rješivosti ovih jednadžbi (pošto se radi o 10 jednadžbi), već iduće godine nakon objave opće teorije relativnosti, Karl Schwarzschild je našao prvo egzaktno (sferno simetrično) rješenje Einsteinovih jednadžbi u vakuumu. Njegovo rješenje kasnije proširuju Reissner i Nordstr\o m za slučaj nabijene crne rupe.
+
+Tek kasnije, 1960-ih, počinje takozvano zlatno doba fizike crnih rupa. 1963. Roy P. Kerr je riješio vakumske Einstenove jednadžbe za slučaj nenabijene rotirajuće crne rupe, koje je 1965. Ezra Newman proširio na slučaj nabijene rotirajuće crne rupe. Roger Penrose je  1964. dokazao da će implodirajuća zvijezda producirati singularitet jednom kad formira horizont događaja. Werner Israel je 1967. dao dokaz za teorem koji tvrdi da ``crne rupe nemaju kose"\footnote{Engl. \textit{no hair theorem}} - odnosno da su jedini atributi klasifikacije crne rupe masa, zakretni impuls i naboj. Penrose je također pokazao da se iz crne rupe može ekstrahirati energija (Penroseov proces), no takav proces je bio popraćen povećavanjem površine crne rupe, što je Stephena Hawkinga navelo da poveže površinu crne rupe s termodinamičkom entropijom.
+
+Razmatrajući gravitacijski kolaps u odsutsvu tlaka, Hawking i Bekenstein su 1970-ih godina uspjeli definirati entropiju i površinsku temperaturu crne rupe te su zajedno sa James Bardeenom i Brandonom Carterom postavili četiri zakona termodinamike crnih rupa. Možda je najimpresivniji rezultat tog doba upravo veza entropije i površine horizonta događaja
+
+\begin{equation}
+S_{BH}=\frac{A}{4\hbar G}
+\label{eq:BekensteinHawking}
+\medskip
+\end{equation}
+
+Taj rezultat je naveo fizičare Gerarda 't Hoofta i Leonarda Susskinda da formuliraju holografski princip koji tvrdi da se opis volumena prostora može promatrati preko informacije na granici tog prostora. Razvojem teorije struna Juan Maldacena je koristeći holografski princip uveo AdS/CFT korespondenciju. S jedne strane korespondencije se nalazi konformna teorija polja (CFT od engl. \textit{conformal field theory}), dok su sa druge strane anti-de Sitter prostori koji se koriste u teorijama kvantne gravitacije dane preko formulacije teorije struna\footnote{Za uvod u ADS/CFT korespondenciju pogledajte \citep{Nastase:2007kj, Ramallo:2013bua}.}.
+
+Jedan od većih neriješenih problema unutar opće teorije relativnosti bio je kako reproducirati izaz za entropiju crne rupe, koristeći Boltzmannov formalizam brojanja mikrostanja iz statističke fizike.
+
+Taj problem se prvo riješio koristeći teoriju struna, a kasnije je uspješno reproduciran izraz za entropiju bez pozivanja na teoriju struna. Umjesto toga koristio se formalizam asimptotskih simetrija. Na taj način se izbjegao kompliciran matematički formalizam teorije struna \citep{Brown:1986nw, Strominger:1997eq}.
+
+Današnja istraživanja AdS/CFT korespondencije često sežu u domenu nuklearne fizike i fizike kondenzirane materije. No mi nećemo ići u tom smjeru, ma koliko god on konceptualno bio interesantan.
+
+\bigskip
+
+U ovom radu od interesa nam je promatrati jedan od vidova holografskog principa: Kerr/CFT korespondenciju.
+Konačni cilj ove korespondencije je pokazati jednakost vrijednosti entropije dobivene koristeći termodinamiku i mikroskopsko brojanje stanja.
+Iako ekvivalencija postoji, kao što je pokazano u radu Guice et. al. \citep{Guica:2008mu}, još uvijek nije nađen sustavan teorijski način otkrivanja rubnih uvjeta koji bi dali korespondenciju.
+U drugom poglavlju ćemo dati pregled Kerrove metrike te ćemo prijeći u metriku blizu horizonta za ekstremni Kerrov slučaj (NHEK metrika - engl. \textit{near-horizon extreme Kerr}).
+Zatim ćemo u trećem poglavlju pogledati grupu asimptotskih simetrija te kako se mijenjaju difeomorfizmi određeni rubnim uvjetima specificirani na pozadinskoj metrici. Difeomorfizmi nam služe da bismo dobili centralne naboje, koji će biti ključni u konačnom pokazivanju korespondencije s dvodimenzionalnom CFT.
+
+% % % opisi poglavlja doći će kasnije % % %

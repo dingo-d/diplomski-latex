@@ -1,0 +1,26 @@
+\select@language {croatian}
+\contentsline {chapter}{\numberline {1}Uvod}{1}{chapter.2}
+\contentsline {chapter}{\numberline {2}Pregled Kerrove metrike}{4}{chapter.9}
+\contentsline {section}{\numberline {2.1}NHEK metrika}{11}{section.34}
+\contentsline {subsection}{\numberline {2.1.1}$SL(2,\mathbb {R})$ grupa}{13}{subsection.44}
+\contentsline {subsection}{\numberline {2.1.2}Izvijene geometrije}{15}{subsection.55}
+\contentsline {chapter}{\numberline {3}Grupa asimptotskih simetrija}{19}{chapter.58}
+\contentsline {section}{\numberline {3.1}Algebra difeomorfizama}{24}{section.68}
+\contentsline {section}{\numberline {3.2}Generatori i centralni naboj}{27}{section.80}
+\contentsline {chapter}{\numberline {4}Mikroskopska entropija i dokaz korespondencije}{30}{chapter.92}
+\contentsline {section}{\numberline {4.1}Temperatura ekstremne Kerrove crne rupe}{31}{section.94}
+\contentsline {section}{\numberline {4.2}Cardyjeva formula}{32}{section.103}
+\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{34}{chapter.110}
+\contentsline {chapter}{\numberline {A}Op\IeC {\'c}eniti pojmovi vezani uz mnogostrukosti}{36}{appendix.111}
+\contentsline {section}{\numberline {A.1}Riemannova metrika}{36}{section.112}
+\contentsline {section}{\numberline {A.2}Pseudo-Riemannova metrika}{37}{section.118}
+\contentsline {section}{\numberline {A.3}Poincar\' eov metri\IeC {\v c}ki tenzor}{38}{section.119}
+\contentsline {section}{\numberline {A.4}Izometrije}{38}{section.121}
+\contentsline {section}{\numberline {A.5}Preslikavanja izme\IeC {\dj }u mnogostrukosti}{39}{section.122}
+\contentsline {section}{\numberline {A.6}Asimptotska prostor vremena i ADM dekompozicija}{39}{section.123}
+\contentsline {chapter}{\numberline {B}Izvod NHEK metrike}{41}{appendix.127}
+\contentsline {chapter}{\numberline {C}Odre\IeC {\dj }ivanje rubnih uvjeta i difeomorfizama}{47}{appendix.149}
+\contentsline {chapter}{\numberline {D}Virasoro algebra}{55}{appendix.201}
+\contentsline {chapter}{\numberline {E}Mathematica kod}{60}{appendix.213}
+\contentsline {chapter}{Bibliografija}{70}{appendix*.223}
+\contentsfinish 

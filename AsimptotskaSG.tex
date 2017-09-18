@@ -1,0 +1,126 @@
+\chapter{Grupa asimptotskih simetrija}\label{cha:ASG}
+
+\lettrine[lines=4]{D} {ifeomorfna} invarijantnost je osnovna simetrija opće teorije relativnosti. U prostor-vremenima koji posjeduju asimptotsku granicu, javlja se podgrupa difeomorfizama koji tvore grupu asimptotskih simetrija (engl. \textit{asymptotic symmetry group} (ASG)), koja djeluje netrivijalno na asimptotsku granicu.
+
+\noindent Po definicij, asimptotske simetrije su one baždarne transformacije koje ostavljaju promatrane konfiguracije polja asimptotski invarijantnim \citep{Brown:1986nw}. Detalji grupe asimptotskih simetrija će ovisiti o promatranom prostor-vremenu, dinamici te o nametnutim rubnim uvjetima. Formalizam koji koristimo je onaj koji su razvili Barnich i Brandt \citep{Barnich:2001jy}.
+
+Rubni uvjeti su ograničenja na dopuštene konačne deformacije pozadinske metrike. Ako pozadinsku metriku označimo sa $\bar{g}_{\mu\nu}$ i deformaciju sa $h_{\mu\nu}$,  deformirana metrika je $g_{\mu\nu}=\bar{g}_{\mu\nu}+h_{\mu\nu}$.
+
+Jedan od problema u Kerr/CFT korespondenciji je taj što nije a priori očito koje rubne uvjete moramo postaviti da bismo dobili odgovarajuće difeomorfizme koji će nam koristiti u računu centralnog naboja potrebnog za dokaz korespondencije (nemamo asimptotski ravno prostor-vrijeme). Oni uvelike ovise o fizikalnim kontekstu. 
+
+\noindent Difeomorfizam generiran vektorom $\xi$ će transformirati pozadinsku metriku
+
+\begin{equation*}
+\bar{g}_{\mu\nu}+\Lie_\xi \bar{g}_{\mu\nu}=g_{\mu\nu}=\bar{g}_{\mu\nu}+h_{\mu\nu}
+\end{equation*}
+
+\noindent za neku deformaciju $h_{\mu\nu}$.
+
+Da bismo definirali asimptotske simetrije pozadinskog prostor-vremena, moramo specificirati dozvoljene fluktuacije $h_{\mu\nu}$ i dozvoljene difeomorfizme $\xi$.
+
+Način na koji definiramo ASG je sljedeći:
+
+\begin{enumerate}
+\item Definiramo \textit{granicu} prostor-vremena. 
+
+Moramo definirati što znači `ići u beskonačnost'. Obično se uzima da nam radijalna koordinata ide u beskonačnost $r\to\infty$, dok su nam ostale koordinate fiksne.
+
+\item Definiramo \textit{rubne uvjete} za pozadinsku metriku.
+
+Jedan od načina je da pretpostavimo funkcionalnu formu rubnih uvjeta $h_{\mu\nu}$. Uzimamo da se $h_{\mu\nu}$ može razviti polinomno bar do drugog reda u $r$ kao 
+
+\begin{equation*}
+h_{\mu\nu}=h_{\mu\nu}^1r^m+h_{\mu\nu}^2r^{m-1}+o(r^{m-1})
+\end{equation*}
+
+U našem slučaju, rubni uvjeti specificiraju $h_{\mu\nu}\to \bigo(r^m)$ u beskonačnosti, za neki $r^m$, pri čemu je $m(\mu,\nu)$ cijeli broj.
+
+\item Trebamo naći najopćenitiji oblik difeomorfizama $\xi$ koji čuvaju rubne uvjete (to jest, zadovoljava $\Lie_\xi g_{\mu\nu}=\bigo(r^m)$ za $g_{\mu\nu}$ koji zadovoljava rubne uvjete) i formiraju dobro definiranu algebru danu Lievim zagradama. Takvi difeomorfizmi su \textit{kandidati za asimptotske simetrije}. Podskup tih difeomorfizama će biti unaprijeđen u ASG (i odgovarajuću algebru u algebru asimptotskih simetrija), ako difeomorfizmi zadovoljavaju uvjete koji će biti navedeni. Kao i sa perturbacijama $h_{\mu\nu}$, ovaj korak uključuje pretpostavljanje forme $\xi$. Pretpostavljamo da se $\xi$ mogu razviti u red kao:
+
+\begin{equation*}
+\xi^\mu=r^{m_\mu}\tilde{\xi}^\mu +o(r^{m_\mu})
+\end{equation*}
+
+\noindent gdje je $\tilde{\xi}^\mu$ neka funkcija od koordinata koje nisu $r$\footnote{Često se uzima da je razvoj $\xi^\mu$ razvoj u padajućim potencijama koordinate $r$, odnosno $\xi^\mu=\sum_n\tilde{\xi}^\mu_n(\tau,\theta,\phi)r^{-n}$}.
+
+\item Zatim računamo \textit{naboje} pridružene kandidatima asimptotskih simetrija.
+
+Formalizam Barnicha i Brandta \citep{Barnich:2001jy} omogućuje nam definiranje naboja kao površinskih integrala duž granice $\partial\Sigma$ nul ili prostornog izreza (granica ne mora biti u beskonačnosti). Zato trebamo, umjesto Noetherine struje koja je ($n-1$) forma, ($n-2$) forme, koje se računaju lokalno kao funkcional polja u prostornoj beskonačnosti. Te ($n-2$) forme se nazivaju superpotencijali \citep{Silva:1998ii}.
+Odgovarajući naboj za asimptotsku simetriju $\xi$ je 
+
+\begin{equation}
+Q_\xi[g,\bar{g}]=\int_{\partial\Sigma}k_\xi[h,\bar{g}]
+\label{eq:naboj}
+\end{equation}
+
+\noindent gdje je $k_\xi$ ($n-2$) forma konstruirana iz lineariziranih jednadžbi gibanja za $h_{\mu\nu}$, a $n$ je broj dimenzija prostor-vremena.
+Explicitan izraz za $k_\xi$ je
+
+\begin{equation}
+\begin{split}
+k_\xi[h,\bar{g}]=&k^{[\nu\mu]}_\xi[h,\bar{g}](d^{n-2}x)_{\nu\mu}\\[2.5mm]
+(d^{n-p}x)_{\mu_1\ldots\mu_p}:=&\frac{1}{p!(n-p)!}\epsilon_{\mu_1\ldots\mu_n}dx^{\mu_p+1}\wedge\ldots\wedge dx^{\mu_n}\\[2.5mm]
+k_\xi^{[\nu\mu]}[h,\bar{g}]=&-\frac{\sqrt{-\bar{g}}}{16\pi}\left[\bar{D}^\nu(h\xi^\mu)+\bar{D}_\sigma(h^{\mu\sigma}\xi^\nu)+\bar{D}^\mu(h^{\nu\sigma}\xi_\sigma)+\right.\\[2mm]
++&\frac{3}{2}h\bar{D}^\mu\xi^\nu+\frac{3}{2}h^{\sigma\mu}\bar{D}^\nu\xi_\sigma+\frac{3}{2}h^{\nu\sigma}\bar{D}_\sigma\xi^\mu-(\mu\leftrightarrow\nu)\left.\right]
+\end{split}
+\label{eq:superpot}
+\end{equation}
+
+
+
+\noindent Indekse dižemo i spuštamo pozadinskom metrikom $\bar{g}_{\mu\nu}$, $h=\bar{g}^{\mu\nu}h_{\mu\nu}$ je trag, dok je $\bar{D}^\mu$ pozadinska kovarijantna derivacija.
+
+Općenito, izraz \eqref{eq:naboj} vrijedi samo za infinitezimalne perturbacije $h_{\mu\nu}$. Za konačne $h_{\mu\nu}$ moramo integrirati duž puta $\gamma$ u faznom prostoru da bismo mogli izračunati naboje. Zbog konzistentnosti, naboji moraju biti \textit{integrabilni}, što znači da su neovisni o putu $\gamma$. Dovoljan uvjet integrabilnosti je 
+
+\begin{equation*}
+\int_{\partial\Sigma}k_\xi[\delta h_1,g+\delta h_2]-k_\xi[\delta h_2,g+\delta h_1]-k_\xi[\delta h_1-\delta h_2,g]=0
+\end{equation*}
+
+za bilo koju metriku $g_{\mu\nu}$ dopuštenu s rubnim uvjetima. Integrabilnost je isto tako zadovoljena kada je svojstvo \textit{asimptotske linearnosit} ispunjeno
+
+\begin{equation*}
+Q_\xi[h,\bar{g}]=Q_\xi[h,\bar{g}+\delta g]
+\end{equation*}
+
+odnosno, naboj nema nelinearnih korekcija.
+\item Trebamo odrediti da li su nam naboji \textit{konačni, integrabilni} i \textit{očuvani na ljusci}, gdje `na ljusci' podrazumijevamo da perturbacije zadovoljavaju linearizirane Einsteinove jednadžbe. 
+
+Difeomorfizmi $\xi$ koji odgovaraju ne iščezavajućim nabojima, koji zadovoljavaju ove uvjete, su element ASG. Difeomorfizmi koji odgovaraju trivijalnim nabojima su trivijalne asimptotske simetrije.
+
+ASG se sastoji od svih dopuštenih asimptotskih simetrija koje zadovoljavaju rubne uvjete za $h_{\mu\nu}$ i odgovaraju konačnim, integrabilnim i očuvanim nabojima, modulo trivijalnih asimptotskih simetrija. Vektori $\xi$ koji generiraju difeomorfizme su \textit{asimptotski Killingovi vektori}.
+
+\begin{equation*}
+ASG(\mathcal{M}):=\bigg\{\xi^\mu\ \Big\vert\ \Lie_\xi\ \textrm{poštuje rubne uvjete i}\ Q_\xi\neq 0\bigg\}
+\end{equation*}
+
+\item Računamo algebru naboja danu Diracovim zagradama. Algebra je definirana kao
+
+\begin{equation*}
+\{Q_{\xi_1},Q_{\xi_2}\}:=\delta_{\xi_2}Q_{\xi_1}=Q_{\xi_1}[\Lie_{\xi_2}g,\bar{g}]
+\end{equation*}
+
+te nam daje reprezentaciju algebre asimptotskih simetrija $\xi$, do na moguće centralne ekstenzije $\mathcal{K}_{\xi_1,\xi_2}[\bar{g}]$
+
+\begin{equation*}
+\{Q_{\xi_1},Q_{\xi_2}\}\simeq Q_{[\xi_1,\xi_2]}+\mathcal{K}_{\xi_1,\xi_2}[\bar{g}]-N_{[\xi_1,\xi_2]}[\bar{g}]
+\end{equation*}
+
+Gdje je $N_{[\xi_1,\xi_2]}[\bar{g}]$ proizvoljna normalizacijska konstanta koja je obično nula. U gornjoj formuli ``$\simeq$" označava jednakost na ljusci.
+Eksplicitni izraz za centralni naboj $\mathcal{K}_{\xi_1,\xi_2}[\bar{g}]$ je
+
+\begin{equation*}
+\mathcal{K}_{\xi_1,\xi_2}[\bar{g}]=Q_{\xi_1}[\Lie_{\xi_2}\bar{g},\bar{g}]
+\end{equation*}
+
+Centralni naboj je netrivijalan ako se ne može apsorbirati u $N_{[\xi_1,\xi_2]}[\bar{g}]$. 
+
+Rubni uvjeti su dio specifikacije ASG. Drugačiji rubni uvjeti mogu dati različite grupe asimptotskih simetrija. Problem je ako izaberemo preslabe rubne uvjete, generatori nam neće biti dobro definirani i integrali za računanje naboja će divergirati, no ako stavimo prerestriktivne rubne uvjete, teorija postaje trivijalna jer će nam
+svi generatori iščeznuti.
+\end{enumerate}
+
+Ono što ćemo mi napraviti je reproducirati i objasniti postupak računa iz članka Guica et. al. \citep{Guica:2008mu}. Također treba napomenuti da su nađeni i drugi konzistentni rubni uvjeti \citep{Matsuo:2009sj, Matsuo:2009pg} koje ćemo komentirati kasnije.
+
+
+
+
+

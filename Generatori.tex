@@ -1,0 +1,135 @@
+\section{Generatori i centralni naboj}\label{sec:Generator}
+
+Nakon što smo našli difeomorfizam trebamo konstruirati površinske integrale koji generiraju difeomorfizme \eqref{eq:diffeomorfizam} preko Diracovih zagrada i moramo vidjeti da li su konačni. Koristimo kovarijantni formalizam Barnicha i Brandta \citep{Barnich:2001jy} naveden u poglavlju \ref{cha:ASG}.
+
+\noindent Generator difeomorfizma $\xi$ je očuvan naboj $Q_\xi[g]$. Pod Diracovim zagradama, naboji pridruženi asimptotskim simetrijama zadovoljavaju istu algebru kao i same simetrije do na centralni član. Infinitezimalna razlika naboja između susjednih geometrija $g_{\mu\nu}$ i $g_{\mu\nu}+h_{\mu\nu}$ je dana sa
+
+\begin{equation}
+\delta Q_\xi[g]=\frac{1}{8\pi G}\int_{\partial\Sigma}k_\xi[h,g]
+\end{equation}
+
+\noindent pri čemu integriramo po granici prostornog izreza ($\tau,\ r=\textrm{const.}$), a $k_\xi[h,g]$ je dan sa
+
+\begin{equation}
+\begin{split}
+k_\xi[h,g]=&-\frac{1}{4}\epsilon_{\alpha\beta\mu\nu}\left[\xi^\nu \bar{D}^\mu h-\xi^\nu \bar{D}_\sigma h^{\mu\sigma}+\xi_\sigma\bar{D}^\nu h^{\mu\sigma}+\frac{1}{2}h D^\nu\xi^\mu-\right.\\
+&-\left.h^{\nu\sigma}\bar{D}_\sigma\xi^\mu
++\frac{1}{2}h^{\sigma\nu}(\bar{D}^\mu\xi_\sigma+\bar{D}_\sigma\xi^\mu)\right]dx^\alpha\wedge dx^\beta
+\end{split}
+\label{eq:superpotenc}
+\end{equation}
+
+%Osim što će nas zanimati naboj za dani difeomorfizam \eqref{eq:diffeomorfizam}, trebamo pokazati da je $Q_{\partial_\tau}$, koji mjeri odstupanje od ekstremnosti, dobro definiran. Mi zahtjevamo da taj naboj iščezava, odnosno da bude trivijalan. To se ostvaruje iz dodatnog uvjeta kojeg smo spomenuli u prethodnom poglavlju
+
+%\begin{equation}
+%E_R\equiv Q_{\partial\tau}[g]=0
+%\label{eq:ekstrem}
+%\end{equation}
+
+%\noindent Centralni član je 
+
+%\begin{equation}
+%c_\tau=\frac{1}{8\pi G}\int_{\partial\Sigma} k_{\xi_\epsilon}[\mathcal{L}_\tau \bar{g},\bar{g}]=0
+%\end{equation}
+
+%\noindent gdje je $\Lie_\tau$ Liejeva derivacija duž $\tau$. Direktnim računom vidimo da je Liejeva derivacija duž $\tau$ jednaka nuli, što je u skladu s činjenicom da nemamo centralnog člana između generatora Virasoro algebre i $\tau$ translacija (komutator između $\partial_\tau$ i $\xi_m$ je jednak nuli). Vidimo da je uvjet ekstremnosti \eqref{eq:ekstrem} zadovoljen.
+
+\noindent Algebra Diracovih zagrada grupe asimptotskih simetrija je dana variranjem naboja
+
+\begin{equation}
+\{Q_{\xi_m},Q_{\xi_n}\}=Q_{[\xi_m,\xi_n]}+\frac{1}{8\pi G}\int_{\partial_\Sigma}k_{\xi_m}[\Lie_{\xi_n}\bar{g},\bar{g}]
+\end{equation}
+
+Centralni član računamo tako da uzmemo superpotencijal \eqref{eq:superpotenc} te koristimo  $h_{\mu\nu}=\Lie_{\xi_n}\bar{g}_{\mu\nu}$, gdje je $\bar{g}_{\mu\nu}$ pozadinska metrika (NHEK). Za $\xi^\mu$ uzimamo difeomorfizam \eqref{eq:diffeomorfizam} $\xi_m$, a indekse spuštamo i dižemo pozadinskom metrikom. Integriramo 2-formu koja je proporcionalna volumnom članu $-\sqrt{-|g|} d\theta d\varphi$, za $\tau,\ r=$const. ($\theta\in[0,\pi]$, $\varphi\in[0,2\pi]$). Čitava procedura je dosta duga te se preporuča korištenje programskih alata poput Mathematice.
+
+Fizikalno je $Q_{\xi_m}[h,g]$ definiran kao naboj linearizirane metrike $h_{\mu\nu}$ oko pozadine $g_{\mu\nu}$ kojoj je pridružen Killingov vektor $\xi$, dobiven iz Einsteinovih jednadžbi. U našem slučaju linearizirana metrika je dana kao Liejeva derivacija pozadinske metrike duž asimptotskog Killingovog vektora (difeomorfizma). 
+
+\noindent Liejeva derivacija je
+
+\begin{equation}
+h_{\mu\nu}=4i GJ\Omega^2ne^{-in\varphi}
+ \begin{pmatrix}
+  -r^2(\Lambda^2-1) & 0 & 0 & 0 \\
+  0 & -\frac{1}{(1+r^2)^2} & 0 & i\frac{rn}{2(1+r^2)} \\
+  0 & 0  & 0 & 0  \\
+  0 & i\frac{rn}{2(1+r^2)} & 0 & \Lambda^2
+ \end{pmatrix}
+\end{equation}
+
+\noindent Indekse podižemo sa pozadinskom metrikom: $h^{\alpha\beta}=\bar{g}^{\alpha\mu}\bar{g}^{\beta\nu}h_{\mu\nu}$, $h=\bar{g}^{\mu\nu}h_{\mu\nu}=0$. Pošto integriramo po 2-sferi fiksnog radijusa Levi-Civita simbol $\epsilon_{\alpha\beta\mu\nu}$ može imati indekse $\epsilon_{\theta\varphi\tau r}=1$ ili $\epsilon_{\theta\varphi r\tau}=-1$.
+
+\noindent Superpotencijal, nakon uvrštavanja mogućih indeksa, postaje
+
+\begin{equation}
+\begin{split}
+k_{\xi_m}=&2\left\{-\frac{1}{4}\left[-\xi^r\bar{D}_\sigma h^{\tau\sigma}+\xi_{\sigma}\bar{D}^r h^{\tau\sigma}+\frac{1}{2}h^{\sigma r}\bar{D}^\tau\xi_{\sigma}\right]\right.+\\
+&\hspace{2.8mm}\left. +\frac{1}{4}\left[\xi_{\sigma}\bar{D}^\tau h^{r\sigma}-h^{\tau\sigma}\bar{D}_\sigma \xi^r+\frac{1}{2}h^{\sigma\tau}(\bar{D}^r\xi_{\sigma}+\bar{D}_\sigma\xi^r)\right]\right\}d\theta\wedge d\varphi
+\end{split}
+\end{equation}
+
+\noindent Za primjer podizanja i spuštanja indeksa uzimamo drugi član. Dizanje i spuštanje indeksa se isto može napraviti pomoću Mathematice, no korisno je prvo rukom provesti račun i onda provjeriti da li je to ispravno preko Mathematice. Integraciju ne radimo rukom jer je konačni izraz prekompliciran.
+
+\begin{equation}
+\begin{split}
+\xi_\sigma\bar{D}^r  h^{\tau \sigma}&=g_{\alpha\sigma}\xi^\alpha g^{r\beta}\bar{D}_\beta h^{\tau\sigma}=\\
+&=g_{r\sigma}\xi^r g^{rr}\bar{D}_r h^{\tau\sigma}+g_{\varphi\sigma}\xi^\varphi g^{rr}\bar{D}_r h^{\tau\sigma}=\\
+&=g_{rr}\xi^r g^{rr}\bar{D}_r h^{\tau r}+g_{\varphi\varphi}\xi^\varphi g^{rr}\bar{D}_r h^{\tau\varphi}
+\end{split}
+\end{equation}
+
+\noindent Treba napomenuti da se u nekim članovima javlja izraz tipa $\bar{D}_\mu \xi_\nu$. Želimo dići indeks $\xi_\nu$ da bismo dobili vektor. Tu moramo iskoristiti činjenicu da je metrika kovarijantno konstantna, odnosno $\bar{D}_\alpha\bar{g}_{\mu\nu}=0$ pa možemo komponentu metrike izlučiti ispred kovarijantne derivacije, odnosno $\bar{D}_\mu \xi_\nu=\bar{D}_\mu g_{\nu\alpha} \xi^\alpha= g_{\nu\alpha}\bar{D}_\mu \xi^\alpha$.
+
+
+%Po definiciji u vanjskoj algebri (engl. \textit{exterior algebra}), za p-formu $\omega$ i q-formu $\eta$ vrijedi
+
+%\begin{equation*}
+%\omega\wedge\eta=\frac{(p+q)!}{p!q!}\omega_{[\mu_1\ldots\mu_p}\eta_{\mu_{p+1}\ldots\mu_{p+q}]}
+%\end{equation*}
+
+%\noindent Što nam za naše 1-forme $d\theta$ i $d\varphi$ daje ekstra faktor 2 (jer wedge produkt antikomutira: $d\theta\wedge d\varphi=-d\varphi\wedge d\theta$.)
+
+\noindent Nakon što sredimo sve članove i uvrstimo sve u Mathematicu, dobivamo izraz
+
+\begin{equation*}
+k_{\xi_m}=e^{-i(m+n)\varphi}f(r,\theta)
+\end{equation*}
+
+\noindent Tu moramo koristiti trik prilikom integracije. Naš integral je 
+
+\begin{equation}
+\frac{1}{8\pi G}\int_{\partial_\Sigma}k_{\xi_m}[\Lie_{\xi_n}\bar{g},\bar{g}]=\frac{1}{4\pi G}\lim\limits_{r\to\infty}\int_{0}^{2\pi}\int_{0}^{\pi}\sqrt{-|\bar{g}|} k_{\xi_m}[\Lie_{\xi_n}\bar{g},\bar{g}]  d\theta d\varphi
+\end{equation}
+
+\noindent Koristimo integralnu reprezentaciju Kronecker delta
+
+\begin{equation}
+\frac{1}{2\pi}\int_{0}^{2\pi}e^{i(n-m)\varphi}d\varphi=\delta_{n,m}
+\end{equation}
+
+\noindent Time nam u biti ostaje samo integral po $\theta$. Konačni rezultat integracije je
+
+\begin{equation}
+\frac{1}{8\pi G}\int_{\partial_\Sigma}k_{\xi_m}[\Lie_{\xi_n}\bar{g},\bar{g}]=i\frac{1}{2}n\left(4-m n+n^2\right)J\delta_{m+n,0}=-im(m^2+2)J\delta_{m+n}
+\end{equation}
+
+\noindent Zatim definiramo kvantnu verziju naboja $Q$ preko
+
+\begin{equation*}
+\hbar L_n:=Q_{\xi_n}+\frac{3}{2}J\delta_n
+\end{equation*}
+
+\noindent te uz pravilo promijene Diracovih zagrada između generatora u komutatore kvantnih operatora $\{.,.\}\to-\frac{i}{\hbar}[.,.]$ dobivamo kvantnu algebru naboja 
+
+\begin{equation}
+[L_m,L_n]=(m-n)L_{m+n}+\frac{J}{\hbar}m(m^2-1)\delta_{m+n,0}
+\end{equation}
+
+\noindent što je Virasoro algebra. Iz nje možemo direktno očitati centralni naboj ekstremne Kerrove crne rupe kao
+
+\begin{equation}
+c_L=\frac{12J}{\hbar}
+\end{equation}
+
+
+
+

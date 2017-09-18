@@ -1,0 +1,160 @@
+\chapter{Mikroskopska entropija i dokaz korespondencije}\label{cha:Mikro}
+
+\lettrine[lines=4]{N} {akon} što smo dobili vrijednost centralnog naboja, koji igra ključnu ulogu u izrazu za entropiju, da bismo dokazali korespondenciju treba nam i temperatura ekstremne crne rupe. U poglavlju \ref{cha:Kerr} smo pokazali da je Hawkingova temperatura ekstremne crne rupe jednaka nuli.
+\noindent Općenito, crne rupe ne predstavljaju čista kvantna stanja\footnote{U kontekstu kvantne teorije, entropija je mjera broja kvantnih stanja pomoću kojih opisujemo sustav.} i kvantna polja u okolini crne rupe se nalaze u termalnom stanju. Tada možemo koristiti opis Hartla i Hawkinga za brojanje stanja, samo poopćen na Kerrovu metriku \citep{Bredberg:2011hp, wald2010general}.
+
+\newpage
+
+\section{Temperatura ekstremne Kerrove crne rupe}\label{sec:Temperatura}
+
+%Ako entropiju izrazimo kao funkciju očuvanih naboja\footnote{Trebamo imat na umu da, po Noetherinom teoremu, uz simetrije vežemo pojam očuvanih naboja.} $S_{\textrm{ext}}(J,Q_e,Q_m)$ (pošto radimo sa nenabijenom crnom rupom, električni i magnetski naboji nas ne zanimaju), možemo definirati kemijske potencijale
+
+%\begin{equation*}
+%\frac{1}{T_\phi}=\left(\frac{\partial S_{\textrm{ext}}}{\partial J}\right)_{Q_{e,m}},\quad\frac{1}{T_e}=\left(\frac{\partial S_{\textrm{ext}}}{\partial Q_e}\right)_{J,\ Q_m},\quad\frac{1}{T_m}=\left(\frac{\partial S_{\textrm{ext}}}{\partial Q_m}\right)_{J,\ Q_e}\quad
+%\end{equation*}
+
+%\noindent Oni zadovoljavaju jednadžbu ravnoteže \cite{Compere:2012jk}
+
+%\begin{equation}
+%\delta S_{\textrm{ext}}=\frac{1}{T_\phi}\delta J+\frac{1}{T_e}\delta Q_e+\frac{1}{T_m}\delta Q_m
+%\label{eq:ravnot}
+%\end{equation}
+
+%\noindent To smo isto mogli dobiti gledajući kako se fluktuacije ponašaju u ekstremnom limesu
+
+%\begin{equation}
+%T_H\delta S=0=\delta M-(\Omega^{\textrm{ext}}\delta J+\Phi^{\textrm{ext}}_e\delta Q_e+\Phi^{\textrm{ext}}_m\delta Q_m)
+%\end{equation}
+
+%\noindent pri čemu je $\Omega^{\textrm{ext}}$ zakretni potencijal (kutna brzina je konjugirana zakretnom momentu, stoga ju možemo gledati kao neku vrstu kemijskog potencijala) u ekstremnom limesu, dok su $\Phi^{\textrm{ext}}_{e,m}$ električni i magnetski potencijali u ekstremnom limesu. Vidimo da je svaka varijacija u $J$ ili $Q_{e,m}$ popraćena varijacijom u energiji. Prvi zakon za ne ekstremne crne rupe se može zapisati kao
+
+%\begin{equation}
+%\delta S=\frac{1}{T_H}(\delta M-(\Omega_H\delta J+\Phi_e\delta Q_e+\Phi_m\delta Q_m))
+%\end{equation}
+
+%\noindent Nakon što gledamo ekstremne varijacije sa $\delta M=\delta M_{\textrm{ext}}(J,Q_e,Q_m)$, zatim uzmemo ekstremni limes pozadinske konfiguracije, dobijemo \eqref{eq:ravnot} sa
+
+%\begin{equation}
+%T_\phi\lim\limits_{T_H\to 0}\frac{T_H}{\Omega^{\textrm{ext}}-\Omega_H}=-\frac{\partial T_H/\partial r_+}{\partial\Omega_H/\partial r_+}\Big|_{r_+=r_{\textrm{ext}}}
+%\end{equation}
+
+%\noindent Ekstremalni se limit može primijeniti tako da uzmemo limes kada se radijus horizonta $r_+$ približava ekstremnom radijusu horizonta crne rupe $r_{\textrm{ext}}$.
+
+%Ove kemijske potencijale možemo interpretirati u kontekstu kvantne teorije polja u zakrivljenom prostor-vremenu. 
+
+Koristimo formalizam kvantne teorije polja. Zato krećemo od definicije vakuuma (osnovnog stanja). Za to koristimo Hartle-Hawkingovo stanje \citep{HartleHawking}. Hartle i Hawking su pokazali da se može iskoristiti Feynmanova metoda integrala po putu da bismo dobili amplitudu crne rupe koja emitira skalarnu česticu. 
+
+\noindent Pretpostavimo da imamo kvantno mehanički sustav sa vremenski neovisnih Hamiltonijanom H. Stanje termalne ravnoteže sustava na temperaturi $kT=\beta^{-1}$ je definirano kao matrica gustoće \citep{wald2010general}
+
+\begin{equation*}
+\rho=e^{-\beta H}/Z,\qquad Z=Tr(e^{-\beta H}) \to \textrm{normalizacija}
+\end{equation*}
+
+\noindent Hartle-Hawkingov vakuum za Schwarzschildovu crnu rupu, ograničen na regiju izvan horizonta, je tada matrica gustoće definirana kao
+
+\begin{equation}
+\rho=e^{-\hbar\omega/T_H}
+\end{equation}
+
+\noindent na Hawkingovoj temperaturi $T_H$. No problem je što za prostor-vremena koja nemaju globalni vremenski Killingov vektor (kao što je slučaj sa Kerrovom geometrijom gdje Killingov vektor $\partial_t$ postaje nul na polovima) Hartle-Hawkingov vakuum ne postoji.
+Frolov i Thorne \citep{FrolovThorne} su definirali vakuum koristeći Killingov vektor koji je vremenskog tipa van horizonta do površine na kojoj se opažač mora gibati brzinom svjetlosti da bi ko-rotirao sa crnom rupom.
+
+Konstrukciju Frolov-Thorne vakuuma za općenitu Kerrovu geometriju započinjemo tako da razvijamo kvantna polja u svojstvena stanja asimptotske energije $\omega$ i zakretnog impulsa $m$. Za skalarno polje $\Phi$ možemo zapisati
+
+\begin{equation}
+\Phi=\sum_{\omega,m,l}\phi_{\omega m l}e^{-i\omega \hat{t}+im\hat{\phi}}f_{l}(r,\theta)
+\end{equation}
+
+\noindent gdje smo sa $\hat{t}$ i $\hat{\phi}$ označili koordinate u ne-ekstremnom slučaju.
+
+Vakuum je, kao u slučaju Hartle-Hawkingovog vakuuma, dijagonalna matrica gustoće u svojstvenoj bazi energije-momenta, sa Boltzmannovim faktorom
+
+\begin{equation}
+e^{-\hbar(\omega-\Omega_H m)/T_H}
+\end{equation}
+
+\noindent Što se svodi na Hartle-Hawkingov vakuum za nerotirajući slučaj $\Omega_H=0$. Prilikom transformacije u područje blizu horizonta (kao kod izvoda NHEK metrike u dodatku \ref{cha:izvodNHEK}) imamo
+
+\begin{equation}
+e^{-i\omega' \hat{t}+im'\hat{\phi}}=e^{-\frac{i}{\lambda}(2M\omega-m)t+i\omega\phi}=e^{-in_Rt+in_L\phi}
+\end{equation}
+
+\begin{equation*}
+m'=m,\qquad \omega'=\frac{2M\omega-m}{\lambda},\qquad n_L=m,\qquad n_R=\frac{2M\omega-m}{\lambda}
+\end{equation*}
+
+
+\noindent $n_L$ i $n_R$ su lijevi i desni naboji pridruženi $\partial_\phi$ i $\partial_t$ u regiji blizu horizonta. Tada je Boltzmannov faktor
+
+\begin{equation}
+e^{-\hbar(\omega-\Omega_H m)/T_H}=e^{-(n_L/T_L)-(n_R/T_R)}
+\end{equation}
+
+\noindent gdje su bezdimenzionalne temperature
+
+\begin{equation}
+T_L=\frac{r_+-M}{2\pi(r_+-a)},\qquad T_R=\frac{r_+-M}{2\pi\lambda r}
+\end{equation}
+
+\noindent Uzimajući ekstremni limes $J=M^2$ ($a=M$, $r_+=M$) imamo
+
+\begin{equation}
+T_L=\frac{1}{2\pi},\qquad T_R=0
+\end{equation}
+
+\noindent Lijevi modovi su termalno nastanjeni sa Boltzmannovom raspodjelom na temperaturi $1/2\pi$
+
+\begin{equation}
+e^{-2\pi n_L}
+\end{equation}
+
+\section{Cardyjeva formula}\label{sec:Cardy}
+
+U bilo kojoj unitarnoj i modularno invarijantnoj konformnoj teoriji polja (CFT), u mikrokanonskom ansamblu, entropija je dana preko lijevog i desnog centralnog naboja i lijevih i desnih svojstvenih stanja $L_0,\ \bar{L_0}$ kada je $L_0\gg c_L$ i $\bar{L}_0\gg c_R$ kao
+
+\begin{equation}
+S_{CFT}=2\pi\left(\sqrt{\frac{c_L L_0}{6}}+\sqrt{\frac{c_R \bar{L}_0}{6}}\right)
+\label{eq:entr1}
+\end{equation}
+
+\noindent Ovo je Cardyjeva formula \citep{Cardy1, Cardy2}. Transformacijom u kanonski ansambl preko definicije lijeve i desne temperature
+
+\begin{equation}
+\left(\frac{\partial S_{CFT}}{\partial L_0}\right)_{\bar{L}_0}=\frac{1}{T_L},\qquad \left(\frac{\partial S_{CFT}}{\partial \bar{L}_0}\right)_{L_0}=\frac{1}{T_R}
+\end{equation}
+
+\noindent imamo, nakon što uvrstimo izraz \eqref{eq:entr1} u gornje jednadžbe 
+
+\begin{equation}
+L_0=\frac{\pi^2}{6}c_L T_L^2,\qquad \bar{L}_0=\frac{\pi^2}{6}c_R T_R^2
+\end{equation}
+
+\noindent Time smo dobili Cardyjevu formulu za entropiju preko centralnog naboja i temperature lijevih i desnih modova
+
+\begin{equation}
+S_{CFT}=\frac{\pi^2}{3}(c_L T_L+c_R T_R)
+\label{eq:Cardyentropy}
+\end{equation}
+
+Uz pretpostavku da je geometrija blizu horizonta ekstremne Kerrove crne rupe opisana sa lijevim sektorom dvodimenzionalne konformne teorije polja, pokazali smo da postoji netrivijalna temperatura za pobuđena stanja. Individualni modovi korotiraju sa crnom rupom duž $\partial_\phi$. Pošto lijevi sektor konformne teorije polja identificiramo sa ekscitacijama duž $\partial_\phi$, a $SL(2,\mathbb{R})_R$ sektor je zamrznut, lijevo gibajuća stanja CFT-a su opisana termalnom matricom gustoće sa temperaturama $T_L=1/2\pi$, $T_R=0$. Centralni naboji naboji su $c_L=12 J/\hbar$, $c_R=0$ te uvrštavajući u jednadžbu  \eqref{eq:Cardyentropy} dobivamo
+
+\begin{equation}
+S_{CFT}=\frac{\pi^2}{3}(\frac{12 J}{\hbar}\cdot\frac{1}{2\pi}+0)=\frac{2\pi J}{\hbar}
+\end{equation}
+
+\noindent Ako to usporedimo sa entropijom ekstremne Kerrove crne rupe koja je dana  Bekenstein - Hawkingovom formulom \eqref{eq:BekenHawkingEnt}, vidimo da su te dvije entropije iste!
+
+\begin{equation}
+S_{CFT}=S_{BH}
+\end{equation}
+
+%Iako naizgled izgleda da smo ovaj rezultat dobili slučajno, to nije tako. Za bilo koju rotirajuću ekstremnu crnu rupu, možemo pridružiti lijevu Virasoro algebru centralnog naboja $c_L$. Tada se na isti način može definirati entropija preko Cardijeve formule. Također, ukoliko uzmemo korekcije višeg reda za zakrivljenost u gravitacijskom Lagrangianu, moguće je reproducirati Iyer-Waldovu entropiju
+
+%\begin{equation*}
+%S=-\frac{2\pi}{\hbar}\int_{\Sigma}\frac{\delta^{\textrm{cov}}L}{\delta %R_{abcd}}\epsilon_{ab}\epsilon_{cd} vol(\Sigma)
+%\end{equation*}
+
+%\noindent preko Cardyjeve formule, dok se centralni naboj može izračunati neovisno o entropiji.
+
+
+

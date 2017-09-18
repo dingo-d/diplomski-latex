@@ -1,0 +1,240 @@
+\begin{thebibliography}{32}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Nastase}(2007)}]{Nastase:2007kj}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Nastase}}, ``{Introduction to
+  AdS-CFT},''  (\bibinfo{year}{2007}), \eprint{hep-th/0712.0689}.
+
+\bibitem[{\citenamefont{Ramallo}(2013)}]{Ramallo:2013bua}
+\bibinfo{author}{\bibfnamefont{A.~V.} \bibnamefont{Ramallo}}, ``{Introduction
+  to the AdS/CFT correspondence},''  (\bibinfo{year}{2013}),
+  \eprint{hep-th/1310.4319}.
+
+\bibitem[{\citenamefont{Brown and Henneaux}(1986)}]{Brown:1986nw}
+\bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Brown}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Henneaux}}, ``{Central
+  Charges in the Canonical Realization of Asymptotic Symmetries: An Example
+  from Three-Dimensional Gravity},'' \bibinfo{journal}{Commun.Math.Phys.}
+  \textbf{\bibinfo{volume}{104}}, \bibinfo{pages}{207} (\bibinfo{year}{1986}).
+
+\bibitem[{\citenamefont{Strominger}(1998)}]{Strominger:1997eq}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Strominger}}, ``{Black hole
+  entropy from near horizon microstates},'' \bibinfo{journal}{JHEP}
+  \textbf{\bibinfo{volume}{9802}}, \bibinfo{pages}{009} (\bibinfo{year}{1998}),
+  \eprint{hep-th/9712251}.
+
+\bibitem[{\citenamefont{Guica et~al.}(2009)\citenamefont{Guica, Hartman, Song,
+  and Strominger}}]{Guica:2008mu}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Guica}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Hartman}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Song}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Strominger}}, ``{The Kerr/CFT
+  Correspondence},'' \bibinfo{journal}{Phys.Rev.}
+  \textbf{\bibinfo{volume}{D80}}, \bibinfo{pages}{124008}
+  (\bibinfo{year}{2009}), \eprint{hep-th/0809.4266}.
+
+\bibitem[{\citenamefont{Visser}(2007)}]{Visser:2007fj}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Visser}}, ``{The Kerr
+  spacetime: A Brief introduction},''  (\bibinfo{year}{2007}),
+  \eprint{gr-qc/0706.0622}.
+
+\bibitem[{\citenamefont{Wald}(2010)}]{wald2010general}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Wald}},
+  \emph{\bibinfo{title}{General Relativity}} (\bibinfo{publisher}{University of
+  Chicago Press}, \bibinfo{year}{2010}), ISBN \bibinfo{isbn}{9780226870373}.
+
+\bibitem[{\citenamefont{Townsend}(1997)}]{Townsend:1997ku}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Townsend}}, ``{Black holes:
+  Lecture notes},''  (\bibinfo{year}{1997}), \eprint{gr-qc/9707012}.
+
+\bibitem[{\citenamefont{Raine and Thomas}(2005)}]{raine2005black}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Raine}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Thomas}},
+  \emph{\bibinfo{title}{Black Holes: An Introduction}}, Black Holes: An
+  Introduction (\bibinfo{publisher}{Imperial College Press},
+  \bibinfo{year}{2005}), ISBN \bibinfo{isbn}{9781860945861}.
+
+\bibitem[{\citenamefont{Poisson}(2004)}]{poissonrelativist}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Poisson}},
+  \emph{\bibinfo{title}{A Relativist's Toolkit}} (\bibinfo{publisher}{Cambridge
+  University Press}, \bibinfo{year}{2004}), ISBN \bibinfo{isbn}{9781139451994}.
+
+\bibitem[{\citenamefont{Bekenstein}(1973)}]{Bekenstein73}
+\bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Bekenstein}}, ``Black holes
+  and entropy,'' \bibinfo{journal}{Phys. Rev. D} \textbf{\bibinfo{volume}{7}},
+  \bibinfo{pages}{2333} (\bibinfo{year}{1973}).
+
+\bibitem[{\citenamefont{Bardeen et~al.}(1973)\citenamefont{Bardeen, Carter, and
+  Hawking}}]{Hawking73}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Bardeen}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Carter}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Hawking}}, ``The four laws of
+  black hole mechanics,'' \bibinfo{journal}{Communications in Mathematical
+  Physics} \textbf{\bibinfo{volume}{31}}, \bibinfo{pages}{161}
+  (\bibinfo{year}{1973}), ISSN \bibinfo{issn}{0010-3616}.
+
+\bibitem[{\citenamefont{Banados et~al.}(1993)\citenamefont{Banados, Henneaux,
+  Teitelboim, and Zanelli}}]{Banados:1992gq}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Banados}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Henneaux}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Teitelboim}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Zanelli}},
+  ``{Geometry of the (2+1) black hole},'' \bibinfo{journal}{Phys.Rev.}
+  \textbf{\bibinfo{volume}{D48}}, \bibinfo{pages}{1506} (\bibinfo{year}{1993}),
+  \eprint{gr-qc/9302012}.
+
+\bibitem[{\citenamefont{Anninos et~al.}(2009)\citenamefont{Anninos, Li, Padi,
+  Song, and Strominger}}]{Anninos:2008fx}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Anninos}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Li}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Padi}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Song}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Strominger}}, ``{Warped
+  AdS(3) Black Holes},'' \bibinfo{journal}{JHEP}
+  \textbf{\bibinfo{volume}{0903}}, \bibinfo{pages}{130} (\bibinfo{year}{2009}),
+  \eprint{hep-th/0807.3040}.
+
+\bibitem[{\citenamefont{Coussaert and Henneaux}(1994)}]{Coussaert:1994tu}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Coussaert}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Henneaux}}, ``{Selfdual
+  solutions of (2+1) Einstein gravity with a negative cosmological constant},''
+   (\bibinfo{year}{1994}), \eprint{hep-th/9407181}.
+
+\bibitem[{\citenamefont{Bengtsson and Sandin}(2006)}]{Bengtsson:2005zj}
+\bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Bengtsson}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Sandin}}, ``{Anti de Sitter
+  space, squashed and stretched},'' \bibinfo{journal}{Class.Quant.Grav.}
+  \textbf{\bibinfo{volume}{23}}, \bibinfo{pages}{971} (\bibinfo{year}{2006}),
+  \eprint{gr-qc/0509076}.
+
+\bibitem[{\citenamefont{Barnich and Brandt}(2002)}]{Barnich:2001jy}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Barnich}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Brandt}}, ``{Covariant theory
+  of asymptotic symmetries, conservation laws and central charges},''
+  \bibinfo{journal}{Nucl.Phys.} \textbf{\bibinfo{volume}{B633}},
+  \bibinfo{pages}{3} (\bibinfo{year}{2002}), \eprint{hep-th/0111246}.
+
+\bibitem[{\citenamefont{Silva}(1999)}]{Silva:1998ii}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Silva}}, ``{On superpotentials
+  and charge algebras of gauge theories},'' \bibinfo{journal}{Nucl.Phys.}
+  \textbf{\bibinfo{volume}{B558}}, \bibinfo{pages}{391} (\bibinfo{year}{1999}),
+  \eprint{hep-th/9809109}.
+
+\bibitem[{\citenamefont{Matsuo et~al.}(2010{\natexlab{a}})\citenamefont{Matsuo,
+  Tsukioka, and Yoo}}]{Matsuo:2009sj}
+\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Matsuo}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Tsukioka}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.-M.} \bibnamefont{Yoo}}, ``{Another
+  Realization of Kerr/CFT Correspondence},'' \bibinfo{journal}{Nucl.Phys.}
+  \textbf{\bibinfo{volume}{B825}}, \bibinfo{pages}{231}
+  (\bibinfo{year}{2010}{\natexlab{a}}), \eprint{hep-th/0907.0303}.
+
+\bibitem[{\citenamefont{Matsuo et~al.}(2010{\natexlab{b}})\citenamefont{Matsuo,
+  Tsukioka, and Yoo}}]{Matsuo:2009pg}
+\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Matsuo}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Tsukioka}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.-M.} \bibnamefont{Yoo}}, ``{Yet Another
+  Realization of Kerr/CFT Correspondence},'' \bibinfo{journal}{Europhys.Lett.}
+  \textbf{\bibinfo{volume}{89}}, \bibinfo{pages}{60001}
+  (\bibinfo{year}{2010}{\natexlab{b}}), \eprint{hep-th/0907.4272}.
+
+\bibitem[{\citenamefont{Bredberg et~al.}(2011)\citenamefont{Bredberg, Keeler,
+  Lysov, and Strominger}}]{Bredberg:2011hp}
+\bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Bredberg}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Keeler}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Lysov}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Strominger}}, ``{Cargese
+  Lectures on the Kerr/CFT Correspondence},''
+  \bibinfo{journal}{Nucl.Phys.Proc.Suppl.} \textbf{\bibinfo{volume}{216}},
+  \bibinfo{pages}{194} (\bibinfo{year}{2011}), \eprint{hep-th/1103.2355}.
+
+\bibitem[{\citenamefont{Hartle and Hawking}(1976)}]{HartleHawking}
+\bibinfo{author}{\bibfnamefont{J.~B.} \bibnamefont{Hartle}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.~W.} \bibnamefont{Hawking}}, ``Path-integral
+  derivation of black-hole radiance,'' \bibinfo{journal}{Phys. Rev. D}
+  \textbf{\bibinfo{volume}{13}}, \bibinfo{pages}{2188} (\bibinfo{year}{1976}).
+
+\bibitem[{\citenamefont{Frolov and Thorne}(1989)}]{FrolovThorne}
+\bibinfo{author}{\bibfnamefont{V.~P.} \bibnamefont{Frolov}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{K.~S.} \bibnamefont{Thorne}}, ``Renormalized
+  stress-energy tensor near the horizon of a slowly evolving, rotating black
+  hole,'' \bibinfo{journal}{Phys. Rev. D} \textbf{\bibinfo{volume}{39}},
+  \bibinfo{pages}{2125} (\bibinfo{year}{1989}).
+
+\bibitem[{\citenamefont{Cardy}(1986)}]{Cardy1}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Cardy}}, ``Operator content of
+  two-dimensional conformally invariant theories,'' \bibinfo{journal}{Nucl.
+  Phys. B} \textbf{\bibinfo{volume}{270}}, \bibinfo{pages}{186}
+  (\bibinfo{year}{1986}).
+
+\bibitem[{\citenamefont{Bl{\"{o}}te et~al.}(1986)\citenamefont{Bl{\"{o}}te,
+  Cardy, and Nightingale}}]{Cardy2}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Bl{\"{o}}te}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Cardy}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Nightingale}}, ``Conformal
+  invariance, the central charge, and universal finite-size amplitudes at
+  criticality,'' \bibinfo{journal}{Phys. Rev. Lett.}
+  \textbf{\bibinfo{volume}{56}}, \bibinfo{pages}{742} (\bibinfo{year}{1986}).
+
+\bibitem[{\citenamefont{McClintock et~al.}(2006)\citenamefont{McClintock,
+  Shafee, Narayan, Remillard, Davis et~al.}}]{supermasiv1}
+\bibinfo{author}{\bibfnamefont{J.~E.} \bibnamefont{McClintock}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Shafee}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Narayan}},
+  \bibinfo{author}{\bibfnamefont{R.~A.} \bibnamefont{Remillard}},
+  \bibinfo{author}{\bibfnamefont{S.~W.} \bibnamefont{Davis}},
+  \bibnamefont{et~al.}, ``{The Spin of the Near-Extreme Kerr Black Hole GRS
+  1915+105},'' \bibinfo{journal}{Astrophys.J.} \textbf{\bibinfo{volume}{652}},
+  \bibinfo{pages}{518} (\bibinfo{year}{2006}), \eprint{astro-ph/0606076}.
+
+\bibitem[{\citenamefont{Arnowitt et~al.}(2008)\citenamefont{Arnowitt, Deser,
+  and Misner}}]{Arnowitt:1962hi}
+\bibinfo{author}{\bibfnamefont{R.~L.} \bibnamefont{Arnowitt}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Deser}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Misner}}, ``{The Dynamics
+  of general relativity},'' \bibinfo{journal}{Gen.Rel.Grav.}
+  \textbf{\bibinfo{volume}{40}}, \bibinfo{pages}{1997} (\bibinfo{year}{2008}),
+  \eprint{gr-qc/0405109}.
+
+\bibitem[{\citenamefont{Frauendiener}(2004)}]{lrr-2004-1}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Frauendiener}}, ``Conformal
+  infinity,'' \bibinfo{journal}{Living Reviews in Relativity}
+  \textbf{\bibinfo{volume}{7}} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{Bardeen and Horowitz}(1999)}]{Bardeen:1999px}
+\bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Bardeen}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~T.} \bibnamefont{Horowitz}}, ``{The Extreme
+  Kerr throat geometry: A Vacuum analog of AdS(2) x S${}^2$},''
+  \bibinfo{journal}{Phys.Rev.} \textbf{\bibinfo{volume}{D60}},
+  \bibinfo{pages}{104030} (\bibinfo{year}{1999}), \eprint{hep-th/9905099}.
+
+\bibitem[{\citenamefont{{de Azc{\'a}rraga, J.A. and Izquierdo,
+  J.M.}}({1998})}]{de1998lie}
+\bibinfo{author}{\bibnamefont{{de Azc{\'a}rraga, J.A. and Izquierdo, J.M.}}},
+  \emph{\bibinfo{title}{{Lie Groups, Lie Algebras, Cohomology and Some
+  Applications in Physics}}}, {Cambridge Monographs on Mathematical Physics}
+  (\bibinfo{publisher}{{Cambridge University Press}}, \bibinfo{year}{{1998}}),
+  ISBN \bibinfo{isbn}{{9780521597005}}.
+
+\bibitem[{\citenamefont{Compere}()}]{ComperePaket}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Compere}}, ``{Computing
+  conserved charges in gravity using Mathematica},'',
+  \urlprefix\url{http://staff.science.uva.nl/~compere/package.html}.
+
+\bibitem[{\citenamefont{Bonanos}()}]{RGTC}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Bonanos}}, ``{Riemannian
+  Geometry and Tensor Calculus in Mathematica},'',
+  \urlprefix\url{http://www.inp.demokritos.gr/~sbonano/RGTC/}.
+
+\end{thebibliography}

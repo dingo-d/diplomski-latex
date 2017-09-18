@@ -1,0 +1,120 @@
+\section{Algebra difeomorfizama}\label{sec:Diff}
+
+Detaljno ćemo izvesti račun iz članka \citep{Guica:2008mu}. Krećemo od metrike blizu horizonta ekstremne Kerrove crne rupe \eqref{eq:NHEKlinel}
+
+\begin{equation*}
+d\bar{s}^2=2GJ\Omega^2\left(-(1+r^2)d\tau^2+\frac{dr^2}{1+r^2}+d\theta^2+\Lambda^2(d\varphi+rd\tau)^2\right)
+\end{equation*}
+
+\noindent Pošto nemamo asimptotski ravno prostor-vrijeme na granici $r\to\infty$, nisu nam poznati rubni uvjeti, kao što je to slučaj s AdS${}_3$ \citep{Brown:1986nw}. Stoga ih moramo sami zadati te provjeriti da li će nam dobiveni difeomorfizmi dati naboje koji su konačni i integrabilni.
+
+Cilj je, preko zadanih rubnih uvjeta konstruirati asimptotski Killingov vektor $\xi$ koji, uz izbor funkcija ovisno o simetrijama, zadovoljava Virasoro algebru.
+
+\noindent Radimo u bazi ($\tau,\ r,\ \theta,\ \phi$) te pišemo rubne uvjete
+
+\begin{equation}
+\bordermatrix{~ & \tau & r & \theta & \varphi \cr
+              & h_{\tau\tau}=\bigo(r^2) & h_{\tau r}=\bigo(r^{-2}) & h_{\tau\theta}=\bigo(r^{-1}) & h_{\tau\varphi}=\bigo(1) &\cr
+              & h_{r\tau}=\bigo(r^{-2}) & h_{rr}=\bigo(r^{-3}) & h_{r\theta}=\bigo(r^{-2}) & h_{r\varphi}=\bigo(r^{-1}) & \cr
+              & h_{\theta\tau}=\bigo(r^{-1}) & h_{\theta r}=\bigo(r^{-2}) & h_{\theta\theta}=\bigo(r^{-1}) & h_{\theta\varphi}=\bigo(r^{-1}) \cr
+              & h_{\varphi\tau}=\bigo(1) & h_{\varphi r}=\bigo(r^{-1}) & h_{\varphi\theta}=\bigo(r^{-1}) & h_{\varphi\varphi}=\bigo(1) \cr}
+\label{eq:Guicaru}
+\end{equation}
+
+\noindent $h_{\mu\nu}=h_{\nu\mu}$ je devijacija metrike od pozadinske NHEK metrike $\bar{g}$ \eqref{eq:NHEKmet}\medskip
+
+\noindent Rješavamo asimptotsku Killingovu jednadžbu
+
+\begin{equation}
+\Lie_\xi\bar{g}_{\mu\nu}=h_{\mu\nu}
+\end{equation}
+
+\noindent Zbog činjenice da je ovo jednadžba za simetričan tenzor, imamo 10 nezavisnih linearnih parcijalnih diferencijalnih jednadžbi prvog reda za vektor $\xi=\xi^\mu\partial_\mu$ \footnote{To bi za simetričan tenzor u D dimenzija dalo D(D+1)/2 jednadžbe.}.
+
+\noindent Pretpostavljamo da nam komponente željenog difeomorfizma imaju ansatz
+
+\begin{equation}
+\xi^\mu=\sum\limits_{n=-1}^{\infty}\xi^\mu_n(\tau,\theta,\varphi)r^{-n}
+\label{eq:ansatz}
+\end{equation}
+
+\noindent Uvrštavajući pretpostavljeni ansatz, nakon poduljeg računa danog u dodatku \ref{cha:IzvodDiff} dobijemo najopćenitiji difeomorfizam koji čuva rubne uvjete \eqref{eq:Guicaru}
+
+\begin{equation}
+\xi=[C+\mathcal{O}(r^{-3})]\partial_\tau+[-r\epsilon'(\varphi)+\mathcal{O}(1)]\partial_r+\mathcal{O}(r^{-1})\partial_\theta+[\epsilon(\varphi)+\mathcal{O}(r^{-2})]\partial_\varphi
+\label{eq:diffeomorfizam}
+\end{equation}
+
+\noindent gdje je $\epsilon(\varphi)$ proizvoljna glatka funkcija, a $C$ je proizvoljna konstanta. Članovi nižeg reda će odgovarati trivijalnim difeomorfizmima. Grupa asimptotskih simetrija sadrži jednu kopiju konformne cikličke grupe generirane vektorom
+
+\begin{equation}
+\xi_\epsilon=\epsilon(\varphi)\partial_\varphi-r\epsilon'(\varphi)\partial_r
+\label{eq:difeojedn}
+\end{equation}
+
+Jedan od fizikalnih razloga za ovakav izgled difeomorfizma jest taj što imamo ne nula temperaturu koja je asocirana s modovima koji korotiraju sa crnom rupom. Odnosno duž horizonta crne rupe opažači se gibaju brzinom svjetlosti. Postojanje temperature ukazuje na postojanje ekscitacija duž $\partial_\varphi$. Pošto imamo $\varphi\sim\varphi+2\pi$, možemo definirati $\epsilon_n(\varphi)=-e^{-in\varphi}$ i $\xi_n=\zeta(\epsilon_n)$.
+
+\noindent Ovakvi generatori simetrija će zadovoljavati Virasoro algebru \ref{cha:Virasoro}
+
+\begin{equation}
+i[\xi_m,\xi_n]=(m-n)\xi_{m+n}
+\end{equation}
+
+\noindent Ako stavimo $n=0$ imamo 
+
+\begin{equation}
+\xi_0=-\partial_\varphi
+\end{equation}
+
+\noindent što je upravo generator $U(1)$ rotacijske izometrije.\medskip
+
+Treba uočiti da ovakav odabir rubnih uvjeta ne daje generatore koji će pojačati\newline $SL(2,\mathbb{R})$ u Virasoro algebru. 
+
+\noindent Generator $\tau$ translacija je $\partial_\tau$. Konjugirana očuvana veličina, očuvani naboj, tog generatora je veličina E${}_R$ koja mjeri devijaciju  od ekstrema ($M^2/G-J$) crne rupe. Pošto razmatramo ekstremne crne rupe ($J=M^2$) tada je E${}_R=0$, odnosno uzet je dodatan zahtjev $Q_{\partial_\tau}=0$. U članku od Guice et. al.  \citep{Guica:2008mu} je dano pojašnjenje takvog odabira.
+
+%\noindent To je lako za provjeriti. Prvo možemo vidjeti da difeomorfizam \eqref{eq:difeojedn} i $\partial_\tau$ komutiraju $[\xi_\epsilon,\partial_\tau]=0$, zatim se može eksplicitno pokazati da je naboj koji mjeri devijaciju od ekstrema
+
+%\begin{equation*}
+%Q_{\partial_\tau}=\frac{1}{8\pi G}\int_{\partial\Sigma}k_{\xi_\epsilon}[\Lie_{\partial_\tau}g,g]=0
+%\end{equation*}
+
+%\noindent jer je Liejeva derivacija pozadinske metrike duž $\partial_\tau$ jednaka nuli. Stoga vidimo da je uvjet
+
+%\begin{equation*}
+%Q_{\partial_\tau}[g]=0
+%\end{equation*}
+
+%\noindent ispunjen.
+
+
+\noindent U člancima \citep{Matsuo:2009sj, Matsuo:2009pg} uz drugačiji izbor rubnih uvjeta dobiju difeomorfizam
+
+\begin{equation}
+\xi=[\epsilon_\tau(\tau)+\mathcal{O}(r^{-1})]\partial_\tau+[-r\epsilon'_\tau(\tau)-r\epsilon_\varphi'(\varphi)+\mathcal{O}(1)]\partial_r+\mathcal{O}(r^{-1})\partial_\theta+[\epsilon_\varphi(\varphi)+\mathcal{O}(r^{-1})]\partial_\varphi
+\end{equation}
+
+\noindent Uz izbor $\epsilon_n(\varphi)=e^{-i n\varphi}$ i $\epsilon_n(\tau)=\tau^{1+n}$ dobiju se generatori
+
+\begin{equation}
+l_n=e^{-in\varphi}\partial_\varphi+i nre^{-in\varphi}\partial_r\qquad \bar{l}_n=-i\tau^{1+n}+i(1+n)r\tau^n\partial_r
+\end{equation}
+
+\noindent koji zadovoljavaju Virasoro algebre
+
+\begin{equation}
+i[l_n,l_m]=(n-m)l_{n+m},\qquad i[\bar{l}_n,\bar{l}_m]=(n-m)\bar{l}_{n+m}
+\end{equation}
+
+Dvije algebre možemo shvatiti kao algebre lijevih i desnih modova (engl. \textit{movers}) u CFT. Također za $n=0$ ponovo dobijemo generator $U(1)$ izometrije $l_0$, dok za $n=-1,0,1$ za $\bar{l}_n$ dobijemo $SL(2,\mathbb{R})$ Killingove vektore.
+
+Treba naglasiti da ako uključimo difeomorfizme koji dopuštaju pojačavanje $SL(2,\mathbb{R})$ grupe izometrija u Virasoro, dobijemo trivijalne naboje (koje ćemo izračunati za \eqref{eq:diffeomorfizam} i pokazati da nisu 0).
+
+\noindent U slučaju ekstremnih geometrija nas ne zanima netrivijalna $SL(2,\mathbb{R})$ ili druga Virasoro albebra, jer je entropija ekstremnih crnih rupa dana koristeći samo jednu kopiju Virasoro algebre, dok druga kopija mjeri odstupanje od ekstrema crne rupe.
+
+\noindent Jedna od mogućnosti je da se konstruira regija blizu horizonta za ne ekstremne crne rupe preko perturbacijske teorije, kao velika deformacija geometrije blizu horizonta ekstremne crne rupe.
+
+\noindent U tom slučaju se algebra difeomorfizama, koja proširuje $SL(2,\mathbb{R})$ algebru na Virasoro, dobiva preko renormalizabilnog tenzora energije-impulsa (koji je ekvivalentan kvazi-lokalnom Brown-York tenzoru energije-impulsa). No takav opis više ne spada u standardnu asimptotsku analizu.
+
+
+
+

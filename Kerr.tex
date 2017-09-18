@@ -1,0 +1,605 @@
+\chapter{Pregled Kerrove metrike}\label{cha:Kerr}
+
+\lettrine[lines=4]{K} {errova} metrika opisuje geometriju praznog prostora oko nenabijene rotirajuće crne rupe. Razlog zašto je prošlo više od 48 godina od otkrića Schwarzschildovog rješenja, do otkrića Kerrovog rješenja Einsteinovih jednadžbi, je taj što su računi veoma komplicirani. Zato nećemo izvoditi Kerrovu metriku, nego ćemo ju izraziti i koristiti u daljnjim računima.
+
+Iako postoje mnogi koordinatni izbori za račun sa Kerrovom metrikom \citep{Visser:2007fj}, mi ćemo linijski element Kerrove metrike izraziti u Boyer-Lindquistovim koordinatama ($\hat{t}, \hat{r}, \theta, \hat{\phi}$). One su korisne jer minimiziraju broj ne-dijagonalnih komponenti metrike, što nam olakšava analiziranje asimptotskog ponašanja i razumijevanje razlike \emph{horizonta događaja} i \emph{ergosfere}.\medskip
+
+\noindent Linijski element Kerrove metrike je dan sa
+
+\begin{equation}
+ds^2=-\frac{\Delta}{\rho^2}(d\hat{t}-a\sin^2\theta d\hat{\phi})^2
++\frac{\sin^2\theta}{\rho^2}\left((\hat{r}^2+a^2)d\hat{\phi}-ad\hat{t}\right)^2+\frac{\rho^2}{\Delta}d\hat{r}^2+\rho^2d\theta^2
+\label{eq:KerrBoyerLindquist}
+\end{equation}
+
+\newpage
+
+\noindent Uvodimo pokrate
+
+\begin{equation*}
+\Delta\equiv \hat{r}^2-2M\hat{r}+a^2,\quad \rho^2\equiv \hat{r}^2+a^2\cos^2\theta,\quad a\equiv \frac{GJ}{M},\quad M\equiv GM_{ADM}
+\end{equation*}
+
+\noindent $J$ je zakretni impuls, $M$ je geometrijska masa, $G$ je četverodimenzionalna Newtonova konstanta, dok je $M_{ADM}$ Arnowitt, Deser, Misner masa.
+
+\begin{mydef*}
+Neka je ($\mathcal{M},g_{ab}$) asimptotski ravno prostor vrijeme\footnote{Vidjeti dodatak \ref{cha:Appmnogo} za dodatne informacije o asimptotski ravnom prostor vremenu.} i neka je $\Sigma$ hiperploha prostornog tipa\footnote{Svaka krivulja na toj hiperplohi je prostornog tipa.} koja je $C^{>1}$ u prostornoj beskonačnosti $\imath^0$ tako da su ($\Sigma,\ h_{ab},\ K_{ab}$) početni uvjeti u asimptotskom prostoru. Neka su $x^1, x^2, x^3$ asimptotski euklidske koordinate na $\Sigma$. Ukupnu energiju (masu) definiramo kao
+
+\begin{equation}
+M_{ADM}=\frac{1}{16\pi}\lim\limits_{r\to\infty}\sum_{\mu,\nu=1}^{3}\int\left(\frac{\partial h_{\mu\nu}}{\partial x^\mu}-\frac{\partial h_{\mu\mu}}{\partial x^\nu}\right)N^\nu dA
+\end{equation}
+
+\noindent gdje je $r^2=[(x^1)^2+(x^2)^2+(x^3)^2]^{1/2}$, a integrira se po sferi konstantnog radijusa $r$ te je $N^a$ normalni vektor na sferu \citep{wald2010general}.
+\end{mydef*}
+
+\newpage
+
+Promotrimo singularitete ove metrike. Metrika je singularna (divergira) za $\rho^2=0$ i $\Delta=0$, što nam daje
+
+\begin{equation}
+\rho^2=0\Rightarrow\quad \hat{r}^2+a^2\cos^2\theta=0\Rightarrow\quad \hat{r}=0\ \textrm{i}\ \theta=\pi/2
+\label{eq:singul1}
+\end{equation}
+
+\noindent odnosno
+
+\begin{equation}
+\Delta=0\Rightarrow\quad \hat{r}^2-2M\hat{r}+a^2=0\Rightarrow\quad \hat{r}=r_\pm=M\pm\sqrt{M^2-a^2} 
+\label{eq:singul2}
+\end{equation}
+
+U slučaju \eqref{eq:singul1} radi se o singularitetu zakrivljenosti (prstenasti singularitet), jer na tom mjestu skalarna zakrivljenost\footnote{U ovom slučaju radi se o Kretschmannovom skalaru} divergira ($R_{abcd}R^{abcd}\to\infty$), za razliku od ponašanja $R_{abcd}R^{abcd}$ u $r_\pm$, gdje ćemo imati regularno ponašanje, što ukazuje na to da su singulariteti u \eqref{eq:singul2} koordinatni singulariteti. Također vidimo da kako $a\to 0$ imamo regularno ponašanje u $r_\pm$, odnosno dobivamo Schwarzschildovu metriku ($r_{+}\to 2M$, $r_{-}\to 0$). Njih možemo identificirati kao unutarnje i vanjske horizonte (shematski prikaz je na slici \ref{fig:kerrergo}).
+
+Da bismo izbjegli gole singularitete (što bi kršilo princip kozmičke cenzure), zakretni impuls mora biti ograničen $J\in[-M^2/G,M^2/G]$.
+
+Imamo dva Killingova vektora $K=\partial_t$ i $R=\partial_\phi$ te njihovu linearnu kombinaciju za bilo koje konstantne koeficijente $aK^\mu+bR^\mu$.
+
+\noindent $R^\mu$ predstavlja aksijalnu simetriju, no vektor $K^\mu$ nije ortogonalan niti jednoj hiperplohi što ukazuje da je metrika stacionarna, ali ne i statična. To ima smisla pošto se crna rupa vrti, ali stalno istom mjerom (brzinom).
+
+Upravo zbog stacionarnosti no ne i statičnosti metrike, horizonti događaja u $r_\pm$ nisu Killingovi horizonti za asimptotski vremenski translacijski Killingov vektor $K=\partial_t$.
+
+Ako je Killingovo vektorsko polje $\chi^\mu$ svjetlosnog (nul) tipa duž neke nul hiperplohe $\mathcal{N}$, kažemo da je $\mathcal{N}$ Killingov horizont $\chi^\mu$, odnosno
+
+\begin{mydef*}
+Nul hiperploha $\mathcal{N}$ je Killingov horizont Killingovog vektora $\rchi$, ako je $\rchi$, na hiperplohi $\mathcal{N}$, okomit na $\mathcal{N}$.
+\end{mydef*}
+
+\noindent Norma vektora $K^\mu$ je 
+
+\begin{equation}
+K^\mu K_\mu=g_{\mu\nu}K^\mu K^\nu=g_{tt}K^tK^t=-\frac{1}{\rho^2}(\Delta-a^2\sin^2\theta)
+\end{equation}
+
+\noindent koja neće iščeznuti na vanjskom horizontu $r_+$ ($\Delta=0$)
+
+\begin{equation}
+K^\mu K_\mu=\frac{a^2}{\rho^2}\sin^2\theta\ge 0
+\end{equation}
+
+Killingov vektor je vremenskog tipa na vanjskom horizontu, osim na polovima gdje je nul tipa. Pošto imamo unutarnji i vanjski horizont, područje između tih ploha se naziva \emph{ergosfera} ili \emph{ergoregija}.
+
+Unutar ergosfere moramo se gibati u smjeru rotacije crne rupe ($\phi$ smjer), no moguće je kretati se prema ili od obzora događaja (i izaći iz ergosfere).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[clip,scale=0.22]{KerrErgo.eps}
+\caption[Shematski prikaz Kerrovog prostor-vremena]{Shematski prikaz lokacija horizonta, ergopovršina i singulariteta zakrivljenosti u Kerrovom prostor-vremenu.}
+\label{fig:kerrergo}
+\end{figure}
+
+Korisno je još vidjeti parametre kao što su Hawkingova temperatura, površinska gravitacija, kutna brzina horizonta i konačno entropiju Kerrove crne rupe.
+
+Promotrimo foton koji je emitiran u $\phi$ smjeru na nekom radijusu $r$ u ekvatorijalnoj ravnini $\theta=\pi/2$ Kerrove crne rupe. U trenu kada smo emitirali foton, njegov impuls nema komponente u $r$ ili $\theta$ smjeru pa nam je uvjet da mu je trajektorija nul dan sa
+
+\begin{equation}
+ds^2=0=g_{tt}dt^2+g_{t\phi}(dt d\phi+d\phi dt)+g_{\phi\phi}d\phi^2
+\end{equation}
+
+\noindent Rješavajući to kao kvadratnu jednadžbu u $d\phi/dt$ dobivamo rješenje
+
+\begin{equation}
+\frac{d\phi}{dt}=-\frac{g_{t\phi}}{g_{\phi\phi}}\pm\sqrt{\left(\frac{g_{t\phi}}{g_{\phi\phi}}\right)^2-\frac{g_{tt}}{g_{\phi\phi}}}
+\end{equation}
+
+\noindent Ako to izvrijednimo na površini ergosfere ($g_{tt}=0$) dva rješenja su (uz $\theta=\pi/2$ i $r=r^+_E=2M$)
+
+\begin{equation}
+\frac{d\phi}{dt}=0,\quad \frac{d\phi}{dt}=\frac{2a}{2M^2+a^2}
+\end{equation}
+
+\noindent Rješenje različito od nule ima isti predznak kao i $a$, što interpretiramo kao gibanje fotona u istom smjeru kao rotacija i crne rupe, dok rješenje jednako nuli interpretiramo tako da se foton koji se giba u smjeru suprotno od vrtnje crne rupe uopće ne giba.
+
+Analogno možemo definirati kutnu brzinu horizonta događaja $\Omega_H$ kao minimalnu kutnu brzinu čestice na horizontu
+
+\begin{equation}
+\Omega_H=\frac{d\phi}{dt}=-\left.\frac{g_{t\phi}}{g_{\phi\phi}}\right\rvert_{r=r_+}=\frac{2a}{r^2_+ +a^2}=\frac{a}{Mr_+}
+\end{equation}
+
+Da bismo vidjeli kolika je Hawkingova temperatura Kerrove crne rupe, potrebna nam je površinska gravitacija $\kappa$.
+\emph{Površinska gravitacija} u slučaju Schwarzschildove metrike je definirana kao akceleracija statične čestice blizu horizonta mjerena u prostornoj beskonačnosti \citep{Townsend:1997ku}. U Schwarzschildovom slučaju se često koristi primjer spuštanja užeta prema crnoj rupi i promatranja sile koja djeluje na uže. U Kerrovom slučaju taj nam primjer neće koristiti, jer će bilo koji dio užeta koji spustimo u ergosferu biti potrgan zbog rotacije i činjenice da unutar ergosfere objekt ne može biti statičan.
+
+Jedan od načina da promotrimo površinsku gravitaciju Kerrove crne rupe jest da pogledamo promjenu nul Killingovog vektora.
+
+Killingov vektor u Kerrovoj metrici koji zadovoljava definiciju za Killingov horizont (nul Killingov vektor) je $\rchi^\mu=K^\mu+\Omega_H R^\mu$, gdje smo $K^\mu$ i $R^\mu$ prethodno definirali. Pošto je $\rchi^\mu$ okomit na $\mathcal{N}$, duž Killingovog horizonta zadovoljava geodetsku jednadžbu
+
+\begin{equation}
+\chi^\mu(\nabla_\mu\chi^\nu)=-\kappa\chi^\nu
+\label{eq:povgrav}
+\end{equation}
+
+Parametar $\kappa$ je površinska gravitacija. Koristeći Killingovu jednadžbu $\nabla_{\left(\mu\right. }\rchi_{\left. \nu\right)}=0$ i činjenicu da je $\rchi_{\left[\mu\right.}\nabla_\nu \rchi_{\left.\sigma\right]}=0$ (jer je $\chi^\mu$ okomit na $\mathcal{N}$), iz \eqref{eq:povgrav} dobijemo formulu za računanje površinske gravitacije
+
+\begin{equation}
+\kappa^2=-\left.\frac{1}{2}(\nabla_\mu\rchi_\nu)(\nabla^\mu\rchi^\nu)\right\rvert_\mathcal{N}
+\label{eq:povgravrac}
+\end{equation}
+
+\noindent Pošto nam je metrika u Boyer-Lindquistovim koordinatama singularna na horizontu, moramo koristiti upadne Kerrove koordinate (engl. \textit{ingoing Kerr}) ($v,\ \hat{r},\ \theta,\ \tilde{\phi}$) koje su definirane sa
+
+\begin{equation*}
+\begin{split}
+dv&=d\hat{t}+(\hat{r}^2+a^2)\frac{d\hat{r}}{\Delta}\\
+d\tilde{\phi}&=d\hat{\phi}+a\frac{d\hat{r}}{\Delta}
+\end{split}
+\end{equation*}
+
+\noindent pa nam metrika postaje
+
+\begin{equation*}
+\begin{split}
+ds^2&=\left(1-\frac{2M\hat{r}}{\rho^2}\right)dv^2-2d\hat{r}dv-\rho^2d\theta^2-A\frac{\sin^2\theta}{\rho^2}d\tilde{\phi}^2+\\
+&+2a\sin^2\theta d\tilde{\phi}d\hat{r}+\frac{4aMr}{\rho^2}\sin^2\theta d\tilde{\phi} dv\\
+\end{split}
+\end{equation*}
+
+\noindent pri čemu je $A=(\hat{r}^2+a^2)^2-a^2\Delta\sin^2\theta$. Tada je
+
+\begin{equation}
+\kappa=\frac{r_+-r_-}{2(r_+^2+a^2)}=\frac{\sqrt{M^2-a^2}}{r_+^2+a^2}=\frac{\sqrt{M^2-a^2}}{2Mr_+}
+\label{eq:povgrfin}
+\end{equation}
+
+\noindent Vidimo da površinska gravitacija ne ovisi o $\theta$, što ukazuje na to da je ona uniformna na horizontu događaja. Za ekstremnu crnu rupu ona je nula, to jest, rotacija uravnoteži gravitaciju. U slučaju rotacije zvijezda, to bi bilo ekvivalentno rotiranju zvijezde brzinom raspada - ona brzina koja se postiže kada je centrifugalna sila na ekvatoru jednaka gravitacijskoj sili \citep{wald2010general, raine2005black}.
+
+\newpage
+
+Četiri zakona termodinamike crnih rupa su veoma slični običnim zakonima termodinamike, s tim da površinska gravitacija $\kappa$ ima ulogu temperature, površina horizonta crne rupe $A$ ima ulogu entropije i masa $M$ ima ulogu unutarnje energije.
+
+\noindent Hawkingova temperatura crne rupe je definirana (do na faktor $\hbar$) kao 
+
+\begin{equation}
+T_H=\frac{1}{2\pi}\kappa
+\end{equation}
+
+\noindent Koja iznosi, nakon uvrštavanja \eqref{eq:povgrfin}
+
+\begin{equation}
+T_H=\frac{1}{2\pi}\frac{\sqrt{M^2-a^2}}{2Mr_+}
+\end{equation}
+
+\noindent Detaljnije o Hawkingovoj temperaturi se može naći u \citep{poissonrelativist} na 122. stranici.
+
+\begin{mydef*}
+Drugi zakon termodinamike crnih rupa kaže da ako je energetski nul uvjet zadovoljen, tada se površina crne rupe ne može smanjiti: $\delta A>0$. 
+\end{mydef*}
+
+Jedini način da bi drugi zakon termodinamike vrijedio jest da crne rupe imaju entropiju, što su Bekenstein i Hawking \citep{Bekenstein73, Hawking73} i pokazali
+
+\begin{equation}
+S_{BH}=\frac{A}{4}
+\end{equation}
+
+\noindent pri čemu je $A$ površina horizonta crne rupe, u slučaju Kerrove metrike dana sa \citep{wald2010general}
+
+\begin{equation}
+A=\int\limits_{r=r_+}\sqrt{g_{\theta\theta}g_{\phi\phi}}d\theta d\phi=4\pi(r_+^2+a^2)
+\end{equation}
+
+\noindent što nakon uvrštavanja izraza za radijus vanjskog horizonta događaja $r_+$ iz \eqref{eq:singul2} postaje
+
+\begin{equation}
+A=8\pi M r_+
+\end{equation}
+
+\noindent Na kraju imamo entropiju Kerrove crne rupe 
+
+\begin{equation}
+S_{BH}=2\pi Mr_+
+\label{eq:BekenHawkingEnt}
+\end{equation}
+
+\noindent Ono što nas najviše zanima je ekstremni slučaj, kada je zakretni impuls crne rupe $J$ maksimalno dopušten: $J=M^2$. U tom slučaju je $a=J/M=M$ i $r_+=M$ te su i površinska gravitacija i Hawkingova temperatura 0, dok je entropija takve crne rupe
+
+\begin{equation}
+S_{BH}=\frac{2\pi J}{\hbar}
+\end{equation}
+
+\noindent To je rezultat koji ćemo pokušati reproducirati sa mikroskopske strane koristeći konformnu teoriju polja i Cardyjevu formulu za entropiju.
+
+\section{NHEK metrika}\label{sec:NHEK}
+
+U našem nastojanju dokazivanja korespondencije slijedimo članak Guice et. al. \citep{Guica:2008mu} u kojem su oni prvo promatrali područje blizu horizonta ekstremne Kerrove crne rupe.
+
+Često se u fizici uzimaju limesi rješenja problema kojeg promatramo, pošto su računi s njima jednostavniji. Također takvi pojednostavljeni sustavi nam znaju reći dosta toga o originalnom problemu kojeg razmatramo.
+
+Razlog zašto se problemi pojednostavljuju u području blizu horizonta Kerrove crne rupe jest taj što se unutar ergosfere fizikalni objekti moraju rotirati oko, ali zajedno sa crnom rupom. Na horizontu ekstremne crne rupe opažači se moraju rotirati oko crne rupe brzinom svjetlosti što će uzrokovati pojavu samo kiralnih stupnjeva slobode (onih koji se rotiraju u istom smjeru).
+
+Ekstremne crne rupe su definirane kao stacionarne crne rupe sa iščezavajućom Hawkingovom temperaturom ($T_H=0$) te kao one čiji se unutarnji i vanjski horizonti poklapaju.
+
+Prije nego što specificiramo rubne uvjete u asimptotskoj beskonačnosti NHEK metrike, ukratko ćemo proći kroz korake izvoda koji se može naći u dodatku \ref{cha:izvodNHEK}.
+
+\noindent Definiramo bezdimenzionalne koordinate
+
+\begin{equation}
+t=\frac{\lambda \hat{t}}{2M},\quad y=\frac{\lambda M}{\hat{r}-M},\quad \phi=\hat{\phi}-\frac{\hat{t}}{2M},\quad \lambda\to 0
+\end{equation}
+
+\noindent čime dobivamo NHEK metriku u koordinatama Poincar\'eovog tipa\footnote{Koordinate Poincareovog tipa opisuju hiperbolni prostor te se koriste kod definiranja koordinata na AdS${}_n$ prostoru. Za dodatak o Poincar\'eovoj metrici pogledajte \ref{cha:Appmnogo}.}
+
+\begin{equation}
+ds^2=2GJ\Omega^2\left(\frac{-dt^2+dy^2}{y^2}+d\theta^2+\Lambda^2\left(d\phi+\frac{dt}{y}\right)^2\right)
+\end{equation}
+
+\noindent pri čemu su 
+
+\begin{equation}
+\Omega^2\equiv\frac{1+\cos^2\theta}{2},\quad\Lambda\equiv\frac{2\sin\theta}{1+\cos^2\theta}
+\end{equation}
+
+\noindent $\phi\sim\phi+2\pi$ i $0\leq \theta\leq \pi$. NHEK geometrija nije asimptotski ravna\footnote{Ugrubo možemo reći da je asimptotski ravno prostorvrijeme je ono za koje se beskonačnosi u konformnom dijagramu poklapaju sa onim od Minkowskog prostor-vremena, sa budućom nul beskonačnosti $\mathscr{I}^+$, prostornom beskonačnosti $\imath^0$ i prošlom nul beskonačnosti $\mathscr{I}^-$. Za detalje pogledati jedanaesto poglavlje u \citep{wald2010general}.}. Zakretni impuls $J$ se javlja kao faktor ispred metrike.
+
+Da bismo prekrili čitavu NHEK geometriju uvodimo globalne koordinate ($r,\ \tau,\ \phi$)
+
+\begin{equation}
+\begin{split}
+y&=(\sqrt{1+r^2}\cos\tau+r)^{-1},\\
+t&=y\sqrt{1+r^2}\sin\tau,\\
+\phi&=\varphi+\ln\left\lvert\frac{\cos\tau+r\sin\tau}{1+\sqrt{1+r^2}\sin\tau}\right\rvert
+\end{split}
+\end{equation}
+
+\noindent čime konačno dobivamo oblik metrike s kojim ćemo raditi
+
+\begin{equation}
+d\bar{s}^2=2GJ\Omega^2\left(-(1+r^2)d\tau^2+\frac{dr^2}{1+r^2}+d\theta^2+\Lambda^2(d\varphi+rd\tau)^2\right)
+\label{eq:NHEKlinel}
+\end{equation}
+
+\begin{equation}
+\bar{g}=2GJ\Omega^2
+ \begin{pmatrix}
+  -(1+r^2(1-\Lambda^2)) & 0 & 0 & r\Lambda^2 \\
+  0 & \frac{1}{1+r^2} & 0 & 0 \\
+  0 & 0  & 1 & 0  \\
+  r\Lambda^2 & 0 & 0 & \Lambda^2
+ \end{pmatrix}
+ \label{eq:NHEKmet}
+\end{equation}
+
+Razlog rada sa NHEK geometrijom je taj što nam ona ima zanimljiva simetrijska svojstva. Ona ima pojačanu $SL(2,\mathbb{R})_R\times U(1)_L$ grupu izometrija\footnote{Izometrije su geometrijske simetrije}. $SL(2,\mathbb{R})$ produžuje simetriju vremenskih translacija obične Kerrove metrike, dok je $U(1)$ naslijeđena aksijalna simetrija Kerrovog rješenja.
+
+\newpage 
+
+\subsection{$SL(2,\mathbb{R})$ grupa}
+
+\begin{mydef*}
+Specijalna linearna grupa $SL(2,\mathbb{R})$ je grupa svih realnih $2\times 2$  matrica determinante 1.
+\end{mydef*}
+
+\noindent Možemo parametrizirati grupu $SL(2,\mathbb{R})$, tako da se ishodište koordinatnog sustava preslikava u identitet grupe
+
+\begin{equation*}
+(a,b,c)\to M(a,b,c)=\begin{bmatrix}
+1+a & b+c \\
+b-c & 1+((b+c)(b-c))/1+a
+\end{bmatrix}
+\end{equation*}
+
+\noindent Nadalje, grupu lineariziramo tako da promatramo kakvo je ponašanje u okolici identiteta. To se radi tako da dopustimo parametrima ($a,b,c$) da postanu infinitezimalno mali i da razvijemo parametre u red
+
+\begin{equation*}
+\begin{split}
+(a,b,c)\to& (\delta a,\delta b,\delta c)\to M(\delta a,\delta b,\delta c)\\
+& M(\delta a,\delta b,\delta c)=\begin{bmatrix}
+1+\delta a & \delta b+\delta c \\
+\delta b-\delta c & (1+(\delta b+\delta c)(\delta b-\delta c))/(1+\delta a)
+\end{bmatrix}
+\end{split}
+\end{equation*}
+
+\noindent Vektori baze u Liejevoj algebri su koeficijenti uz prvi red infinitezimala. U našem slučaju to su $2\times 2$ matrice
+
+\begin{equation*}
+(\delta a,\delta b,\delta c,)\to I_2+\delta a X_a+\delta b X_b+ \delta c X_c=\begin{bmatrix}
+1+\delta a & \delta b+\delta c \\
+\delta b-\delta c & 1-\delta a
+\end{bmatrix}
+\end{equation*}
+
+\noindent pri čemu su
+
+\begin{equation*}
+\begin{split}
+X_a&=\begin{bmatrix}
+1 & 0 \\
+0 & -1
+\end{bmatrix}=\frac{\partial M(a,b,c)}{\partial a}\Bigg |_{(a,b,c)=(0,0,0)}\\
+X_b&=\begin{bmatrix}
+0 & 1 \\
+1 & 0
+\end{bmatrix}=\frac{\partial M(a,b,c)}{\partial b}\Bigg |_{(a,b,c)=(0,0,0)}\\
+X_a&=\begin{bmatrix}
+0 & 1 \\
+-1 & 0
+\end{bmatrix}=\frac{\partial M(a,b,c)}{\partial c}\Bigg |_{(a,b,c)=(0,0,0)}
+\end{split}
+\end{equation*}
+
+\noindent Generatori $SL(2,\mathbb{R})$ grupe tvore Liejevu algebra te za njih vrijede sva poznata svojstva Liejeve algebre: zatvorenost, distributivnost, antisimetriju i Jacobijev identitet
+
+\begin{equation*}
+[X_a,[X_b,X_c]]+[X_b,[X_c,X_a]]+[X_c,[X_a,X_b]]=0
+\end{equation*}
+
+\noindent Tri generatora grupe $SL(2,\mathbb{R})$ zadovoljavaju komutacijske relacije
+
+\begin{equation*}
+[X_a,X_b]=2X_c,\quad [X_a,X_c]=2X_b,\quad [X_b,X_c]=-2X_a
+\end{equation*}
+
+\bigskip
+
+%\noindent Postoje dvije granice u beskonačnosti ($r=\pm \infty$). Površina konstantnog $r$ je uvijek vremenskog tipa. Brown i Henneaux su pokazali da je kvantna gravitacija u asimptotski AdS${}_3$ geometrijama opisana dvodimenzionalnom konformnom teorijom polja, a pošto je granica u beskonačnosti efektivno jednodimenzionalna, a $SL(2,\mathbb{R})$ je konformna grupa linije, očekujemo da je i dualna teorija konformna teorija (CFT) \citep{Bardeen:1999px, Brown:1986nw}.
+
+Pošto je NHEK metrika \eqref{eq:NHEKlinel} stacionarna (ne ovisi eksplicitno o $\tau$), mora postojati Killingov vektor vremenskog tipa kojeg uzimamo da je $\sim\partial_\tau$. Također, metrika ne ovisi eksplicitno o $\varphi$ pa će postojati Killingov vektor $\sim\partial_\varphi$.
+
+\noindent Gledajući izometrije, rotacijska $U(1)$ izometrija je generirana Killingovim vektorom
+
+\begin{equation}
+\xi_0=-\partial_\varphi
+\end{equation}
+
+\noindent Vremenske translacije postaju dio pojačane\footnote{$SL(2,\mathbb{R})\times U(1)$ nije simetrija standardne Kerrove metrike, nego je simetrija blizu horizonta, zato kažemo da je ona pojačana (engl. \textit{enhanced}) simetrija, koja je veća od standardne simetrije za Kerrovu metriku.} $SL(2,\mathbb{R})$ grupe izometrija koja je generirana sa
+
+\begin{equation}
+\tilde{J}_0=2\partial_\tau
+\end{equation}
+
+\begin{equation}
+\tilde{J}_1=\frac{2r\sin\tau}{\sqrt{1+r^2}}\partial_\tau-2\sqrt{1+r^2}\cos\tau\partial_r+\frac{2\sin\tau}{\sqrt{1+r^2}}\partial_\varphi
+\end{equation}
+
+\begin{equation}
+\tilde{J}_2=-\frac{2r\cos\tau}{\sqrt{1+r^2}}\partial_\tau-2\sqrt{1+r^2}\sin\tau\partial_r-\frac{2\cos\tau}{\sqrt{1+r^2}}\partial_\varphi
+\end{equation}
+
+\noindent Također imamo invarijantnost metrike na diskretnu simetriju koja preslikava
+
+\begin{equation*}
+(\tau,\varphi)\to(-\tau,-\varphi)
+\end{equation*}
+
+Lako je provjeriti da su ovi vektori uistinu Killingovi vektori ako riješimo Killingovu jednadžbu, odnosno ako provjerimo da Liejeva derivacija metrike po Killingovom vektoru iščezava \citep{Guica:2008mu}.
+
+\begin{equation}
+\Lie_\xi g_{\mu\nu}=0
+\end{equation}
+
+\noindent Algebra za Killingove vektore $\xi_i=\xi^\mu_i\partial_\mu$ ($i=1,2,3$) je dana preko izraza
+
+\begin{equation*}
+[\xi_a,\xi_b]=(\xi^\nu_a\partial_\nu\xi^\mu_b-\xi^\nu_b\partial_\nu\xi^\mu_a)\partial_\mu
+\end{equation*} 
+
+\noindent Za tri generatora $SL(2,\mathbb{R})$ grupe algebra iznosi\footnote{Ove komutacijske relacije se razlikuju od onih iz definicije algebre $SL(2,\mathbb{R})$ grupe, no to nas ne treba čuditi, jer je reprezentacija generatora grupe drugačija u ovom slučaju. Sama svojstva grupe se ne mijenjaju.}
+
+\begin{equation}
+[\tilde{J}_0,\tilde{J}_1]=-2\tilde{J}_2,\quad [\tilde{J}_0,\tilde{J}_2]=2\tilde{J}_1,\quad [\tilde{J}_1,\tilde{J}_2]=2\tilde{J}_0
+\end{equation}
+
+Ako postavimo $\Lambda(\theta_0)=1$, za vrijednost kuta $\theta=\theta_0\simeq 47.0586^\circ$,  dobivamo 3D geometriju koja je lokalno ‘izvijena’ (engl. \textit{warped}) verzija AdS${}_3$
+
+\begin{equation}
+ds^2=2GJ\Omega^2\left(-(1+r^2)d\tau^2+\frac{dr^2}{1+r^2}+(d\varphi+rd\tau)^2\right)
+\label{eq:lokizvijena}
+\end{equation}
+
+\noindent Za vrijednost kuta $\theta=\theta_0$ vektor $\partial_t$ postane nul vektor, dok za $\theta\in\langle \theta_0,\ \pi-\theta_0\rangle$, $\partial_t$ postaje prostornog tipa, što je izravna posljedica prisutnosti ergoregije u originalnoj Kerrovoj metrici \eqref{eq:KerrBoyerLindquist}. 
+
+\noindent Izvijene AdS${}_3$ geometrije koje se javljaju na proizvoljnim fiksnim vrijednostima kuta $\theta$ su Lorentzijanski\footnote{O Riemannovim i pseudo-Riemannovim mnogostrukostima pogledajte u dodatku \ref{cha:Appmnogo}} analogoni spljoštene S${}^3$ (3-sfera).
+
+\subsection{Izvijene geometrije}
+
+Izvijena (engl. \textit{warped}) geometrija je Riemannova ili Lorentzijanska mnogostrukost čiji se metrički tenzor može zapisati kao
+
+\begin{equation*}
+ds^2 = g_{ab}(y)dy^a dy^b + f(y) g_{ij}(x) dx^i dx^j
+\end{equation*}
+
+\noindent Geometrija se skoro rastavlja na Kartezijev produkt $y$ geometrije i $x$ geometrije - osim što je $x$ dio izvijen, odnosno reskaliran je skalarnom funkcijom druge koordinate $y$.
+
+\newpage
+
+Maksimalno simetričan prostor sa konstantnom negativnom zakrivljenosti ($R<0$) se naziva anti-de Sitter prostor. 2+1 dimenzionalan anti-de Sitter prostor je definiran kao hiperploha radijusa zakrivljenosti $\ell$\footnote{Katkad se stavlja da je $\ell=1$ radi jednostavnosti, pošto se radijus zakrivljenosti javlja kao faktor ispred metrike pa ne mijenja bitno njen oblik.}
+
+\begin{equation*}
+x_0^2+x_1^2-x_2^2-x_3^2=-\ell^2
+\end{equation*}
+
+\noindent uronjena u četverodimenzionalan ravni prostor s metrikom 
+
+\begin{equation*}
+ds^2=dx_0^2+dx_1^2-dx_2^2-dx_3^2
+\end{equation*}
+
+\noindent odnosno skraćeno
+
+\begin{equation*}
+g_{ab}=\textrm{diag}(1,1,-1,-1)
+\end{equation*}
+
+\noindent Po konstrukciji AdS${}_3$ metrika je invarijantna na djelovanje grupe $SO(2,2)$ \citep{Banados:1992gq, Anninos:2008fx}. Killingovi vektori su:
+
+\begin{equation*}
+J_{ab}=x_a\frac{\partial}{\partial x^b}-x_b\frac{\partial}{\partial x^a}
+\end{equation*}
+
+\noindent$SO(p,q)$ je specijalna neodređena ortogonalna grupa (engl. \textit{special indefinite orthogonal group}), dimenzije $n=p+q$, u našem slučaju $n=4$, te ima $n(n-1)/2$ Killingovih vektora (u našem sličaju 6). Oni su
+
+\begin{equation*}
+\begin{split}
+J_{01}&=x_0\partial_1-x_1\partial_0\quad J_{02}=x_0\partial_2+x_2\partial_0\quad J_{03}=x_0\partial_3+x_3\partial_0\\
+J_{12}&=x_1\partial_2+x_2\partial_1\quad J_{13}=x_1\partial_3+x_3\partial_1\quad J_{23}=x_3\partial_2-x_2\partial_3
+\end{split}
+\end{equation*}
+
+\noindent Algebra je dana sa
+
+$$[J_{ab},J_{cd}]=g_{ad}J_{bc}-g_{ac}J_{bd}+g_{bc}J_{ad}-g_{bd}J_{ac}$$
+
+\noindent Na primjer
+
+$$[J_{01},J_{02}]=g_{02}J_{10}-g_{00}J_{12}+g_{10}J_{02}-g_{12}J_{00}=-g_{00}J_{12}=-J_{12}$$
+
+\noindent Što je lako za provjeriti rukom eksplicitno.
+
+\noindent Topologija prostora je $\mathbb{R}^2\times S^1$, dok grupa izometrija $SO(2,2)$ ima lokalni izomorfizam
+
+\begin{equation*}
+SO(2,2)\simeq SL(2,\mathbb{R})_R\times SL(2,\mathbb{R})_L
+\end{equation*}
+
+\noindent Linearnom kombinacijom tih vektora dobivamo nove vektore koji su reprezentacija Liejeve algebre $sl(2,\mathbb{R})$ (bez tilde su generatori $SL(2,\mathbb{R})_L$, dok su sa tildom generatori $SL(2,\mathbb{R})_R$):
+
+\begin{equation*}
+J_{0}=J_{01}-J_{23}\quad J_{1}=J_{13}-J_{02}\quad J_{2}=-J_{12}-J_{03}
+\end{equation*}
+
+\begin{equation*}
+\tilde{J}_{0}=-J_{01}-J_{23}\quad \tilde{J}_{1}=J_{13}+J_{02}\quad \tilde{J}_{2}=J_{12}-J_{03}
+\end{equation*}
+
+\noindent Sa algebrom
+
+$$[J_1,J_2]=2J_0,\quad [J_0,J_1]=-2J_2\quad [J_0,J_2]=2J_1$$
+
+\noindent odnosno
+
+$$[\tilde{J}_1,\tilde{J}_2]=2\tilde{J}_0,\quad [\tilde{J}_0,\tilde{J}_1]=-2\tilde{J}_2\quad [\tilde{J}_0,\tilde{J}_2]=2\tilde{J}_1$$
+
+\noindent Izborom koordinatnog sustava ($\tau,\ \omega,\ \sigma$), pri čemu nam nove koordinate pokrivaju čitav prostor ($\{\tau,\omega,\sigma\}\in \langle-\infty,\infty\rangle$), gdje je veza starih i novih koordinata\footnote{Proceduru prelaska u nove koordinate računamo u Mathematici, jer su diferencijali veoma složeni. Izvod možete naći u \citep{Coussaert:1994tu}.}
+
+\begin{equation*}
+\begin{split}
+x_0&=\ell\left(\cos\left(\frac{\tau}{2}\right)\cosh\left(\frac{\sigma}{2}\right)\sinh\left(\frac{\omega}{2}\right)-\sin\left(\frac{\tau}{2}\right)\sinh\left(\frac{\sigma}{2}\right)\cosh\left(\frac{\omega}{2}\right)\right)\\
+x_1&=\ell\left(\cos\left(\frac{\tau}{2}\right)\sinh\left(\frac{\sigma}{2}\right)\cosh\left(\frac{\omega}{2}\right)+\sin\left(\frac{\tau}{2}\right)\cosh\left(\frac{\sigma}{2}\right)\sinh\left(\frac{\omega}{2}\right)\right)\\
+x_2&=\ell\left(\cos\left(\frac{\tau}{2}\right)\cosh\left(\frac{\sigma}{2}\right)\cosh\left(\frac{\omega}{2}\right)+\sin\left(\frac{\tau}{2}\right)\sinh\left(\frac{\sigma}{2}\right)\sinh\left(\frac{\omega}{2}\right)\right)\\
+x_3&=\ell\left(\sin\left(\frac{\tau}{2}\right)\cosh\left(\frac{\sigma}{2}\right)\cosh\left(\frac{\omega}{2}\right)-\cos\left(\frac{\tau}{2}\right)\sinh\left(\frac{\sigma}{2}\right)\sinh\left(\frac{\omega}{2}\right)\right)
+\end{split}
+\end{equation*}
+
+\noindent metrika anti-de Sitter prostora postaje
+
+\begin{equation*}
+\begin{split}
+ds^2&=\frac{\ell^2}{4}(-d\tau^2+d\omega^2+d\sigma^2+2\sinh \omega d\tau d\sigma)=\\
+&=\frac{\ell^2}{4}\left(-(d\tau-\sinh \omega d\sigma)^2+d\omega^2+\cosh^2 \omega d\sigma^2\right)=\\
+&=\frac{\ell^2}{4}\left(-\cosh^2\omega d\tau^2+d\omega^2+(d\sigma+\sinh \omega d\tau)^2\right)
+\end{split}
+\end{equation*}
+
+\noindent Ako to usporedimo sa \eqref{eq:lokizvijena}, vidimo da imamo isti oblik metrike uz $\varphi\to\sigma$ i $r=\sinh\omega$.
+
+\noindent Killingovi vektori u ovoj bazi su
+
+\begin{equation*}
+\begin{split}
+J_0&=\frac{2\cosh\sigma}{\cosh\omega}\partial_\tau+2\sinh\sigma\partial_\omega-2\tanh\omega\cosh\sigma\partial_\sigma\\
+J_1&=\frac{2\sinh\sigma}{\cosh\omega}\partial_\tau+2\cosh\sigma\partial_\omega-2\tanh\omega\sinh\sigma\partial_\sigma\\
+J_2&=2\partial_\sigma\\
+\tilde{J}_0&=2\partial_\tau\\
+\tilde{J}_1&=2\sin\tau\tanh\omega\partial_\tau-2\cos\tau\partial_\omega+\frac{2\sin\tau}{\cosh\omega}\partial_\sigma\\
+\tilde{J}_2&=-2\cos\tau\tanh\omega\partial_\tau-2\sin\tau\partial_\omega-\frac{2\cos\tau}{\cosh\omega}\partial_\sigma
+\end{split}
+\end{equation*}
+
+\noindent Metrika spljoštenog (engl. \textit{squashed})  AdS${}_3$ prostora je
+
+\begin{equation*}
+ds^2_\lambda=\frac{\ell^2}{4}\left(-\cosh^2\omega d\tau^2+d\omega^2+\lambda^2(d\sigma+\sinh \omega d\tau)^2\right)
+\end{equation*}
+
+\noindent pri čemu je $\lambda$ realni parametar (\textit{squashing parameter}). Ako njega stavimo da je nula, dobivamo metriku AdS${}_2$ prostora. % To ukazuje da je AdS${}_2$ kvocjent AdS${}_3$ i realne linije $\mathbb{R}$, odnosno, možemo reći da je AdS${}_3$ neka vrsta Hopfovog svežnja nad AdS${}_2$, gdje je vlakno (engl. \textit{fiber}) realna linija $\mathbb{R}$. Taj analogon smo uzeli iz činjenice da je $S^3/S^1=S^2$, odnosno koristili smo terminologiju Hopfovog svežnja: 3-sfera se sastoji of vlakana, gdje je svako vlakno kružnica - jedno za svaku točku 2-sfere. 
+
+Lako je eksplicitno pokazati, rješavajući Killingovu jednadžbu u slučaju izvijene AdS${}_3$ metrike, da vektori $J_0$ i $J_1$ više nisu Killingovi vektori za tu metriku. $SL(2,\mathbb{R})_R$ vektori i $J_2$ vektor ostaju Killingovi vektori za izvijenu geometriju. Pošto je $\sigma$ koordinata u biti $\varphi$ koordinata (iz usporedbe sa \eqref{eq:lokizvijena} metrikom), vektor $J_2=2\partial_\sigma$ identificiramo kao rotacijski Killingov vektor, odnosno onaj koji generira $U(1)$ grupu izometrija.
+
+\noindent Uvođenjem faktora $\lambda$ `izvili' smo originalnu geometriju i time smo slomili originalnu simetriju AdS${}_3$ prostora sa $SL(2,\mathbb{R})_R\times SL(2,\mathbb{R})_L$ na $SL(2,\mathbb{R})_R\times U(1)_L$.
+
+\noindent Detaljnije o izvijenim geometrijama možete naći u \citep{Coussaert:1994tu,Bengtsson:2005zj,Anninos:2008fx}.
+
+%\subsection{O Hopfovim svežnjevima}
+
+%Standardna jedinična n-sfera $S^n$ je skup točaka ($x_0,x_1,\ldots,x_n$) u $\mathbb{R}^{n+1}$ koje zadovoljavaju jednadžbu
+
+%\begin{equation*}
+%x_0^2+x_1^2+\cdots+x_n^2=1
+%\end{equation*}
+
+%\noindent Geometrijsko značenje gornje jednadžbe je da je $S^n$ skup točaka u $\mathbb{R}^{n+1}$ čija je udaljenost od ishodišta jednaka 1. Tada je 1-sfera $S^1$ jedinična kružnica u ravnini, a 2-sfera $S^2$ je površina krute sfere u trodimenzionalnom prostoru.
+
+%\bigskip
+
+%\noindent \textit{Hopfov svežanj} (engl. \textit{Hopf fibration}) je preslikavanje $h:S^3\to S^2$ definirano sa
+
+%\begin{equation*}
+%h(x_0,x_1,x_2,x_3)=(x_0^2+x_1^2-x_2^2-x_3^2,\ 2(x_0 x_3+x_1 x_2),\ 2(x_1 x_3-x_0 x_2))
+%\end{equation*}
+
+%\noindent Lako je provjeriti da će suma kvadrata koordinata na desnoj strani dati $(x_0^2+x_1^2+x_2^2+x_3^2)^2=1$, tako da je slika od $h$ sadržana u $S^2$.
+
+%\noindent Ugrubo, Hopfov svežanj je način na koji možemo opisati 3-sferu preko kružnica obične sfere. Naravno postoje generalizacije na druge prostore.
+
+%Hopf je promatrao homotopiju. Homotopija, u laičkim terminima, nastoji razumjeti svojstva prostora koja se ne mijenjaju prilikom kontinuiranih deformacija. Jedan od načina na koji možemo otkriti ta svojstva u nepoznatom prostoru $X$ je da ga usporedimo sa prostorom $Y$ koji ima dobro definirana svojstva, putem skupa svih kontinuiranih preslikavanja $Y\to X$. Dva preslikavanja čije se slike mogu kontinuirano deformirati iz jedne u drugu nazivamo ekvivalentnima. Ako znamo nešto o prostoru $Y$ i o skupu homotopno ekvivalentnih preslikavanja sa $Y$ na $X$, možemo saznati nešto o samom prostoru $X$. Treba nam par matematičkih definicija:
+
+%\bigskip
+
+%\begin{mydef*}
+%Topološki prostor je uređen par ($X, \mathcal{T}$) gdje je $X$ skup, a $\mathcal{T}$
+%familija podskupova skupa $X$ koja zadovoljava sljedeća svojstva
+%\begin{enumerate}
+%\itemsep-0.5em 
+%\item $X\in\mathcal{T}$ i $\emptyset\in\mathcal{T}$
+%\item unija proizvoljnog broja skupova iz $\mathcal{T}$ je opet element familije $\mathcal{T}$
+%\item presjek konačno mnogo skupova iz $\mathcal{T}$ je opet element familije $\mathcal{T}$
+%\end{enumerate}
+%\end{mydef*}
+
+%\begin{mydef*}
+%Neka su $X$ i $Y$ topološki prostori. Za dva preslikavanja $f,\ g:
+%X → Y$ kažemo da su homotopna, ako postoji neprekidno preslikavanje
+
+%\begin{equation*}
+%F : X \times I \to Y
+%\end{equation*}
+
+%\noindent takvo da za svaki $x\in X$ vrijedi $F(x,0) = f(x)$ i $F(x,1) = g(x)$. U slučaju kada ovo vrijedi, preslikavanje $F$ zovemo homotopija između $f$ i $g$, te pišemo
+%$f \simeq g$. Ako je g konstantna funkcija, tada kažemo da je f nul-homotopno
+%preslikavanje.
+%\end{mydef*}
+
+%Jedan od težih problema u teoriji homotopije je bilo odrediti klasu ekvivalencija homotopije preslikavanja $Y\to X$ kada su i $X$ i $Y$ sfere te je dimenzija $X$ manja od dimenzije $Y$ \citep{Hopf}.
+
+%\noindent Dakle, S${}^3$ je Hopfov svežanj S${}^1$ nad S${}^2$ sa specifičnim radijusom svežnja.
+
+%\bigskip
+
+
+%\noindent Možemo napraviti konačni pregled svega do sada navedenog.
+
+\bigskip
+
+%Sfere imaju grupu izometrija $SO(3)\simeq SU(2)$, odnosno $SO(4)\simeq SU(2)\times SU(2)$. Izvijanjem se lomi izometrija $SU(2)\times SU(2)$ na $SU(2)\times U(1)$.
+
+%\noindent Analogno gornjem primjeru, grupa izometrija AdS${}_3$ je $SL(2,\mathbb{R})_L\times SL(2,\mathbb{R})_R$. Izvijanjem AdS${}_3$ se lomi $SL(2,\mathbb{R})_L\times SL(2,\mathbb{R})_R$ izometrija na $U(1)_L\times SL(2,\mathbb{R})_R$ \citep{Bardeen:1999px, Bredberg:2011hp}.
+
+

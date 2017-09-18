@@ -1,0 +1,156 @@
+\chapter{Općeniti pojmovi vezani uz mnogostrukosti}\label{cha:Appmnogo}
+
+\section{Riemannova metrika}
+
+Neka je $\mathcal{M}$ glatka mnogostrukost dimenzije $n$. Riemannova metrika na $\mathcal{M}$ je (glatko) kovarijantno 2-tenzorsko polje $g\in\mathcal{T}^2(\mathcal{M})$ koje je
+
+\begin{enumerate}
+\itemsep-2em 
+\item Simetrično, tj. $g(X,Y)=g(Y,X)$,\\
+\item Pozitivno definitno, tj. $g(X,X)>0$ za $X\neq 0$.
+\end{enumerate}
+
+\noindent Dakle, Riemannovom metrikom je na svakom tangencijalnom prostoru $\mathcal{T}_p\mathcal{M}$ odreden skalarni produkt. Mnogostrukost sa Riemannovom metrikom, ($\mathcal{M},g$), naziva se Riemannova mnogostrukost.
+
+\newpage 
+
+\noindent \textbf{Primjer:}
+
+\noindent Euklidska metrika $\bar{g}$ na $\mathbb{R}^n$ u standardnim koordinatama definirana je kao
+
+\begin{equation}
+\bar{g}=\delta_{ij}dx^i dx^j
+\end{equation}
+
+\noindent odnosno
+
+\begin{equation}
+\bar{g}=(dx^1)2+\ldots+(dx^n)^2
+\end{equation}
+
+\noindent ili
+
+\begin{equation}
+(\bar{g}_{ij})=\begin{pmatrix}
+1 & 0 & \ldots & 0 \\
+0 & 1 & \ldots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \ldots & 1
+\end{pmatrix}
+\end{equation}
+
+\section{Pseudo-Riemannova metrika}
+
+Kovarijantni 2-tenzor $g$ na $n$-dimenzionalnom vektorskom prostoru $V$ nazivamo \textit{nedegeneriranim} ako je $g(X, Y) = 0$ za svaki $Y\in V$ ako i samo ako je $X = 0$.
+
+\noindent Odgovarajućim izborom baze za $V$ , nedegenerirani simetrični 2-tenzor ima za matrični prikaz matricu kojoj su elementi dijagonale −1, 1. Broj pozitivnih i negativnih elemenata dijagonale ne ovisi o izboru baze (Sylvesterov teorem o inerciji). \textit{Signatura} od $g$ je par ($p,n−p$) pozitivnih i negativnih predznaka u bilo kojem matričnom prikazu.
+\medskip
+
+\noindent Pseudo-Riemannova metrika na $\mathcal{M}$ je glatko simetrično 2-tenzorsko polje $g$ koje je nedegenerirano u svakoj točki. Pseudo-Riemannova metrika sa signaturom ($n−1, 1$) (ponekad: ($−1, 1,\ldots, 1$)) naziva se \textit{Lorentzovom} (Minkowski – Lorentzovom) metrikom.
+\noindent Općenito, glatka mnogostrukost ne mora dopuštati postojanje Lorentzove metrike.
+
+\bigskip
+
+\noindent U neeuklidskoj geometriji, Poincar\' eov model poluravnine je gornji dio kompleksne ravnine $\mathbb{H}$, gdje je $\mathbb{H} = \{x + iy| y > 0; x, y \in \mathbb{R} \}$, koji zajedno sa Poincar\' eovom metrikom čini model dvodimenzionalne hiperbolne metrike.
+
+\newpage
+
+\section{Poincar\' eov metrički tenzor}
+
+\noindent Poincar\' eov metrički tenzor u Poincar\' eovom modelu poluravnine, je dan na $\mathbb{H}$ kao
+
+
+\begin{equation}
+ds^2=\frac{dx^2+dy^2}{y^2}=\frac{dz \, d\overline{z}}{y^2}
+\label{eq:Poincaremet}
+\end{equation}
+
+\noindent gdje je $dz=dx+idy$. Takav metrički tenzor je invarijantan na djelovanje grupe $SL(2,\mathbb{R})$. Odnosno, ako zapišemo
+
+\begin{equation*}
+z'=x'+iy'=\frac{az+b}{cz+d}
+\end{equation*}
+
+\noindent za $ad-bc=1$ imamo
+
+\begin{equation*}
+x'=\frac{ac(x^2+y^2)+x(ad+bc)+bd}{|cz+d|^2}
+\end{equation*}
+
+\noindent i
+
+\begin{equation*}
+y'=\frac{y}{|cz+d|^2}
+\end{equation*}
+
+\noindent Infinitezimali se transformiraju kao
+
+\begin{equation*}
+dz'=\frac{dz}{(cz+d)^2}
+\end{equation*}
+
+\noindent pa je
+
+\begin{equation*}
+dz'd\overline{z}' = \frac{dz\,d\overline{z}}{|cz+d|^4}
+\end{equation*}
+
+\noindent čime postaje očito da je metrički tenzor \eqref{eq:Poincaremet} invarijantan na djelovanje $SL(2,\mathbb{R})$ grupe.
+
+\section{Izometrije}
+
+Neka su ($\mathcal{M}, g$) i ($\tilde{\mathcal{M}},\tilde{g}$) Riemannove mnogostrukosti. Glatko preslikavanje $F:\mathcal{M}\to \tilde{\mathcal{M}}$ naziva se izometrijom, ako je difeomorfizam za koji vrijedi
+
+\begin{equation*}
+F^*\tilde{g}=g
+\end{equation*}
+
+\noindent Ako postoji izometrija između $\mathcal{M}$ i $\tilde{\mathcal{M}}$, kažemo da su mnogostrukosti izometrične.
+
+\noindent Općenito govoreći, izometrija je preslikavanje između metričkih prostora koje čuva udaljenost.
+
+\section{Preslikavanja između mnogostrukosti}
+
+Razmotrite dvije mnogostrukosti $\mathcal{M}$ i $\tilde{\mathcal{M}}$, koje mogu imati različite dimenzije, sa koordinatnim sustavima $x^\mu$ i $y^\alpha$. Ako imamo preslikavanje $\phi: \mathcal{M}\to \tilde{\mathcal{M}}$ i funkciju $f:\tilde{\mathcal{M}}\to \mathbb{R}$. Tada možemo napraviti kompoziciju $\phi$ i $f$ da konstruiramo preslikavanje ($f\circ \phi$):$\mathcal{M}\to \mathbb{R}$ koje je funkcija na $\mathcal{M}$. Takva se konstrukcija naziva \textit{povlačenje} (engl. \textit{pullback}) $f$ za $\phi$ i označava se sa $\phi^*f$, a definirano je kao
+
+\begin{equation*}
+\phi^*f=(f\circ \phi)
+\end{equation*}
+
+\noindent Dakle, funkcije možemo povlačiti unatrag, no ne možemo ih pogurati naprijed. Ako imamo funkciju $g:\mathcal{M}\to \mathbb{R}$, ne možemo napraviti kompoziciju $g$ sa $\phi$ da dobijemo funkciju na $\tilde{\mathcal{M}}$. Ali, ako vektor promatramo kao operator derivacije koji preslikava glatke funkcije u realne brojeve, tada možemo definirati \textit{guranje} (engl. \textit{pushforward}) vektora. Ako je $V(p)$ vektor u točki $p$ na $\mathcal{M}$, definiramo guranje vektora $\phi_* V$ u točki $\phi(p)$ na $\tilde{\mathcal{M}}$ tako da dajemo da ono djeluje na funkcije na $\tilde{\mathcal{M}}$:
+
+\begin{equation*}
+(\phi_* V)(f)=V(\phi^* f)
+\end{equation*}
+
+\section{Asimptotska prostor vremena i ADM dekompozicija}
+
+Ako bismo htjeli definirati veličine poput mase i zakretnog impulsa u općoj teoriji relativnosti, htjeli bismo promatrati izolirane sustave (sustavi koji ne osjećaju vanjske utjecaje). No niti jedan fizikalni sustav se ne može sasvim izolirati od ostatka svemira. Ako želimo promatrati na primjer strukturu kondenzirane zvijezde, htjeli bismo zanemariti utjecaj daleke tvari i kozmološke zakrivljenosti na zvijezdu i tretirati taj sustav kao da se zvijezda nalazi u prostor-vremenu koje je ravno (Minkowski) na velikim udaljenostima od same zvijezde.
+
+\noindent Zato se uvodi pojam \textit{asimptotski ravnog} prostor-vremena, koje predstavlja idealno izoliran sustav u općoj teoriji relativnosti \citep{wald2010general}.
+
+\begin{mydef*}
+Glatko (prostorno i vremenski orijentabilno) prostor-vrijeme ($\tilde{\mathcal{M}},\tilde{g}_{ab}$) se naziva \textit{asimptotski jednostavno}, ako postoji druga glatka Lorentzova mnogostrukost\newline ($\mathcal{M},g_{ab}$) tako da vrijedi
+
+\begin{enumerate}
+\itemsep-1.5em 
+\item $\tilde{\mathcal{M}}$ je otvorena podmnogostrukost od $\mathcal{M}$ sa glatkom granicom $\partial\mathcal{M}=\mathscr{I}$;\\
+\item postoji glatko skalarno polje $\Omega$ na $\mathcal{M}$, takvo da je $g_{ab}=\Omega^2\tilde{g}_{ab}$ na $\tilde{\mathcal{M}}$ te takvo\newline da je $\Omega=0$, $d\Omega\neq 0$ na $\mathscr{I}$;\\
+\item svaki nul geodezik na $\tilde{\mathcal{M}}$ dobiva buduću i prošlu krajnju točku na $\mathscr{I}$.
+\end{enumerate}
+
+Asimptotski jednostavno prostor-vrijeme se naziva \textit{asimptotski ravno}, ako je $\tilde{R}_{ab}=0$ u okolini $\mathscr{I}$.
+\end{mydef*}
+
+\noindent U tom slučaju koristimo kanonsku formu opće teorije relativnosti ili 3+1 dekompoziciju da bismo definirali masu \citep{Arnowitt:1962hi}. 3+1 dekompozicija pretpostavlja da je prostor-vrijeme podijeljeno (raslojeno) na familiju prostornih površina $\Sigma_t$, označenih sa njihovom vremenskom koordinatom $t$, i s koordinatama na kojima je svaka hiperploha dana sa $x^i$. Dinamičke varijable te teorije su metrički tenzor trodimenzionalnog prostornog izreza $\gamma_{ij}$ i konjugirani momenti $\pi^{ij}(t,x^k)$. Preko tih varijabli možemo definirati Hamiltonijan i napisati jednadžbe gibanja preko Hamiltonovih jednadžbi.
+
+\noindent Znamo da, ako nam Hamiltonijan ne ovisi eksplicitno o vremenu, tada je njegova vrijednost, energija, konstantna. Vremenski izrez u 3+1 dekompoziciji će biti pridružen energiji sustava. On se može integrirati da bismo dobili globalnu vrijednost koju nazivamo ADM masa (ili ekvivalentno ADM energija).
+
+\noindent Drugi način da definiramo energiju, moment i masu sustava, je da promatramo asimptotski ravna prostor-vremena. Tada su, po Noetherinom teoremu, ADM energija, masa i moment dani preko asimptotskih simetrija u prostornoj beskonačnosti.
+
+\noindent Više možete naći u \citep{lrr-2004-1}.
+
+
+
+
+

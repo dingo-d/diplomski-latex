@@ -1,0 +1,289 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.3.16)  11 FEB 2014 21:28
+entering extended mode
+**naslovna.tex
+(D:\faxstuff\5.godina\Diplomski\naslovna.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, croatian, german-x-2012-05-
+30, ngerman-x-2012-05-30, loaded.
+
+! LaTeX Error: Environment titlepage undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \begin{titlepage}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 \begin{center}
+                   
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 35--35
+[][] 
+ []
+
+! Undefined control sequence.
+l.36 {\Large
+             \textsf{Sveuƒçili≈°te u Zagrebu}}\\[3mm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ƒ in font cmss10!
+Missing character: There is no ç in font cmss10!
+Missing character: There is no ≈ in font cmss10!
+Missing character: There is no ° in font cmss10!
+
+Overfull \hbox (35.00003pt too wide) in paragraph at lines 36--36
+ []\OT1/cmss/m/n/10 Sveuilite 
+ []
+
+
+Overfull \hbox (5.16667pt too wide) in paragraph at lines 36--36
+ \OT1/cmss/m/n/10 u 
+ []
+
+
+Overfull \hbox (14.25002pt too wide) in paragraph at lines 36--36
+ \OT1/cmss/m/n/10 Za- 
+ []
+
+
+Overfull \hbox (23.19449pt too wide) in paragraph at lines 36--36
+ \OT1/cmss/m/n/10 grebu 
+ []
+
+! Undefined control sequence.
+l.37 {\Large
+             \textsf{Prirodoslovno-matematiƒçki fakultet}}\\[4mm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ƒ in font cmss10!
+Missing character: There is no ç in font cmss10!
+
+Overfull \hbox (60.38902pt too wide) in paragraph at lines 37--37
+ [][]\OT1/cmss/m/n/10 Prirodoslovno- 
+ []
+
+
+Overfull \hbox (46.83342pt too wide) in paragraph at lines 37--37
+ \OT1/cmss/m/n/10 matematiki 
+ []
+
+
+Overfull \hbox (23.63895pt too wide) in paragraph at lines 37--37
+ \OT1/cmss/m/n/10 fakul- 
+ []
+
+
+Overfull \hbox (11.66667pt too wide) in paragraph at lines 37--37
+ \OT1/cmss/m/n/10 tet 
+ []
+
+! Undefined control sequence.
+l.38 {\Large
+             \textsf{Fiziƒçki odsjek}}\\[8mm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ƒ in font cmss10!
+Missing character: There is no ç in font cmss10!
+
+Overfull \hbox (22.09727pt too wide) in paragraph at lines 38--38
+ [][]\OT1/cmss/m/n/10 Fiziki 
+ []
+
+
+Overfull \hbox (26.27783pt too wide) in paragraph at lines 38--38
+ \OT1/cmss/m/n/10 odsjek 
+ []
+
+! Undefined control sequence.
+l.39 {\Large
+             \textsf{Istra≈æivaƒçki studij fizike}}\\[10mm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ≈ in font cmss10!
+Missing character: There is no æ in font cmss10!
+Missing character: There is no ƒ in font cmss10!
+Missing character: There is no ç in font cmss10!
+
+Overfull \hbox (37.5279pt too wide) in paragraph at lines 39--39
+ [][]\OT1/cmss/m/n/10 Istraivaki 
+ []
+
+
+Overfull \hbox (22.83334pt too wide) in paragraph at lines 39--39
+ \OT1/cmss/m/n/10 studij 
+ []
+
+
+Overfull \hbox (21.1528pt too wide) in paragraph at lines 39--39
+ \OT1/cmss/m/n/10 fizike 
+ []
+
+! Undefined control sequence.
+l.40 {\LARGE
+             \textsf{Denis ≈Ωoljom}}\\[10mm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ≈ in font cmss10!
+Missing character: There is no Ω in font cmss10!
+
+Overfull \hbox (23.05559pt too wide) in paragraph at lines 40--40
+ [][]\OT1/cmss/m/n/10 Denis 
+ []
+
+
+Overfull \hbox (23.00005pt too wide) in paragraph at lines 40--40
+ \OT1/cmss/m/n/10 oljom 
+ []
+
+! Undefined control sequence.
+l.41 {\LARGE
+             \textbf{\textbf{\NASLOV}}}\\[10mm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (63.11076pt too wide) in paragraph at lines 41--41
+ [][]\OT1/cmr/bx/n/10 KERR/CFT 
+ []
+
+
+Overfull \hbox (21.16655pt too wide) in paragraph at lines 41--41
+ \OT1/cmr/bx/n/10 KO- 
+ []
+
+
+Overfull \hbox (20.01378pt too wide) in paragraph at lines 41--41
+ \OT1/cmr/bx/n/10 RE- 
+ []
+
+
+Overfull \hbox (35.72203pt too wide) in paragraph at lines 41--41
+ \OT1/cmr/bx/n/10 SPON- 
+ []
+
+
+Overfull \hbox (29.20818pt too wide) in paragraph at lines 41--41
+ \OT1/cmr/bx/n/10 DEN- 
+ []
+
+
+Overfull \hbox (27.3054pt too wide) in paragraph at lines 41--41
+ \OT1/cmr/bx/n/10 CIJA 
+ []
+
+! Undefined control sequence.
+l.42 {\Large
+             \textsf{Diplomski rad}}\\[30mm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (41.2223pt too wide) in paragraph at lines 42--42
+ [][]\OT1/cmss/m/n/10 Diplomski 
+ []
+
+
+Overfull \hbox (13.38893pt too wide) in paragraph at lines 42--42
+ \OT1/cmss/m/n/10 rad 
+ []
+
+! Undefined control sequence.
+l.46 {\Large
+             \textsf{Zagreb, veljaƒça 2014.}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ƒ in font cmss10!
+Missing character: There is no ç in font cmss10!
+
+Overfull \hbox (31.72229pt too wide) in paragraph at lines 46--47
+ [][]\OT1/cmss/m/n/10 Zagreb, 
+ []
+
+
+Overfull \hbox (14.77779pt too wide) in paragraph at lines 46--47
+ \OT1/cmss/m/n/10 vel- 
+ []
+
+
+Overfull \hbox (12.27782pt too wide) in paragraph at lines 46--47
+ \OT1/cmss/m/n/10 jaa 
+ []
+
+
+Overfull \hbox (22.77785pt too wide) in paragraph at lines 46--47
+ \OT1/cmss/m/n/10 2014. 
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{titlepage}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 \end{titlepage}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> naslovna.tex
+                
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 18 strings out of 495307
+ 282 string characters out of 3181299
+ 45963 words of memory out of 3000000
+ 3309 multiletter control sequences out of 15000+200000
+ 4253 words of font info for 16 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 13i,1n,10p,91b,130s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

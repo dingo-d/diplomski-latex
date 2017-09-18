@@ -1,0 +1,115 @@
+ %%&latex
+\RequirePackage[l2tabu, orthodox]{nag}
+
+%%% Uvodna deklaracija
+\documentclass[a4paper,12pt,oneside,openright]{book}
+
+\input{preamble}
+
+% \setcounter{secnumdepth}{0} % Ukoliko ne želim brojeve u TOC za sekcije
+
+\begin{document}
+
+\include{naslovna} 
+\include{Diplomski_front} 
+\thispagestyle{empty}
+
+\null \hfill
+
+\vfill
+\begin{quotation}
+\itshape{``The most beautiful thing we can experience is the mysterious. It is the source of all true art and all science. He to whom this emotion is a stranger, who can no longer pause to wonder and stand rapt in awe, is as good as dead: his eyes are closed.''\medskip
+
+\hfill Albert Einstein}
+\end{quotation}
+
+\newpage
+
+\thispagestyle{empty}
+
+\vspace*{3cm}
+
+{\hspace{11.2cm} { \fontsize{24.5}{29.4}\selectfont Zahvala}}
+
+\vspace{2.3cm}
+Želim se zahvaliti svojoj obitelji na golemoj podršci i na činjenici da me izdržala tokom perioda mog studiranja.\vspace{0.3cm}
+
+Također želim zahvaliti mentoru doc. dr. sc. Mari Cvitanu na pomoći tokom izrade diplomskog rada te Monici Guici i Geoffreyju Comper\'eu na vrijednim savjetima.\vspace{0.3cm}
+	
+I na kraju, ali ne manje važno, želim se zahvaliti svim prijateljima, na i izvan fakulteta, koji su mi pružali društvo i ohrabrivali me da nastavim dalje. Bez vaše podrške, u obliku raznih druženja i ispijanja pive u Medi, zasigurno ne bih bio na kraju jedne i početku druge epohe mog života. Od srca vam svima zahvaljujem.   
+
+\newpage
+\newpage\null\thispagestyle{empty}\newpage
+
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+\hypersetup{linkcolor=Black}
+\tableofcontents
+%\listoffigures
+
+
+\hypersetup{linkcolor=DarkGray}
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%\pagestyle{fancy}
+%\fancyhf{} % izbriše sve
+%\renewcommand{\chaptermark}[1]{%
+%\markboth{#1}{}}
+%\newcommand{\changefont}{%
+%    \fontsize{14}{16.8}\selectfont}
+%\fancyhead[RO]{{\changefont \MakeUppercase{\leftmark}}}
+%\fancypagestyle{plain}{ % za stranice 'Chapter' (poglavlja)
+%\fancyhf{} % ponovo briše sve
+%\renewcommand{\headrulewidth}{0pt}}
+
+\pagestyle{fancy}
+\addtolength{\textwidth}{\marginparsep}
+\addtolength{\textwidth}{\marginparwidth}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\chaptermark}[1]{\markright{\thechapter\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\MakeUppercase{\rightmark}}
+\fancyhead[RE]{\MakeUppercase{\leftmark}}
+\fancypagestyle{plain}{%
+\fancyhead{} % get rid of headers
+\renewcommand{\headrulewidth}{0pt} % and the line
+}
+
+ 
+
+\include{uvod}
+\include{Kerr}
+\include{AsimptotskaSG}
+\include{DiffGuica}
+\include{Generatori}
+\include{Korespond}
+\include{Zakljucak}
+
+
+
+\appendix
+
+\include{Appmnogo}
+\include{AppNHEK}
+\include{AppDrugi}
+\include{AppViras}
+\include{AppMath}
+
+
+%% Bibliografija
+
+\begingroup
+\raggedright
+\sloppy
+\bibliographystyle{apsrev-title}
+\bibliography{mybib}
+
+\endgroup
+
+
+\end{document}

@@ -1,0 +1,369 @@
+\chapter{Određivanje rubnih uvjeta i difeomorfizama}\label{cha:IzvodDiff}
+
+Rješavamo asimptotske Killingove jednadžbe
+
+\begin{equation}
+\Lie_\xi\bar{g}_{\mu\nu}=h_{\mu\nu}
+\end{equation}
+
+\noindent Zasebno za svaku komponentu metrike, da bismo dobili najopćenitiji oblik difeomorfizma $\xi=\xi^\tau \partial_\tau+\xi^r\partial_r+\xi^\theta\partial_\theta+\xi^\varphi\partial_\varphi$.
+
+\noindent Koristeći formulu za račun Liejeve derivacije tenzora
+
+\begin{equation}
+\Lie_\xi g_{\mu\nu}=\xi^\sigma\partial_\sigma g_{\mu\nu}+g_{\sigma\nu}\partial_\mu\xi^\sigma+g_{\mu\sigma}\partial_\nu\xi^\sigma
+\end{equation}
+
+\noindent dobivamo set od 10 jednadžbi
+
+
+\begin{equation}
+\begin{array}{c @{{}={}} c @{\qquad} c @{{}={}} c}
+\mathcal{L}_\xi g_{\tau\tau} & \mathcal{O}(r^2) & \mathcal{L}_\xi g_{\tau r} & \mathcal{O}(r^{-2}) \\
+\mathcal{L}_\xi g_{\tau\theta} & \mathcal{O}(r^{-1}) & \mathcal{L}_\xi g_{\tau\varphi} & \mathcal{O}(1) \\
+\mathcal{L}_\xi g_{rr} & \mathcal{O}(r^{-3}) & \mathcal{L}_\xi g_{r\theta} & \mathcal{O}(r^{-2}) \\
+\mathcal{L}_\xi g_{r\varphi} & \mathcal{O}(r^{-1}) & \mathcal{L}_\xi g_{\theta\theta} & \mathcal{O}(r^{-1}) \\
+\mathcal{L}_\xi g_{\theta\varphi} & \mathcal{O}(r^{-1}) & \mathcal{L}_\xi g_{\varphi\varphi} & \mathcal{O}(1) \\
+\end{array}
+\end{equation}
+
+\noindent Pišemo jednadžbe po komponentama
+
+\begin{equation}
+\mathcal{L}_\xi g_{\tau\tau}=\xi^r\partial{r} g_{\tau\tau}+\xi^\theta\partial_{\theta} g_{\tau\tau}+2(g_{\tau\tau}\partial_{\tau}\xi^\tau+g_{\tau\varphi}\partial_{\tau}\xi^\varphi)=\mathcal{O}(r^2)
+\label{eq:ttjed}
+\end{equation}
+
+\begin{equation}
+\mathcal{L}_\xi g_{\tau r}=g_{\tau\tau}\partial_{r}\xi^\tau+g_{\tau\varphi}\partial_{r}\xi^\varphi+g_{rr}\partial_{\tau}\xi^r =\mathcal{O}(r^{-2})
+\end{equation}
+
+\begin{equation}
+\mathcal{L}_\xi g_{\tau\theta}=g_{\tau\tau}\partial_{\theta}\xi^\tau+g_{\tau\varphi}\partial_{\theta}\xi^\varphi+g_{\theta\theta}\partial_{\tau}\xi^\theta=\mathcal{O}(r^{-1})\\
+\end{equation}
+
+\begin{equation}
+\mathcal{L}_\xi g_{\tau\varphi}=\xi^r\partial_{r}g_{\tau\varphi}+\xi^\theta\partial_{\theta}g_{\tau\varphi}+g_{\tau\tau}\partial_{\varphi}\xi^\tau+g_{\tau\varphi}\partial_{\varphi}\xi^\varphi+g_{\varphi\varphi}\partial_{\tau}\xi^\varphi+g_{\tau\varphi}\partial_{\tau}\xi^\tau=\mathcal{O}(1)\\
+\end{equation}
+
+\begin{equation}
+\mathcal{L}_\xi g_{rr}=\xi^r\partial_{r}g_{rr}+\xi^\theta\partial_{\theta}g_{rr}+2g_{rr}\partial_{r}\xi^r=\mathcal{O}(r^{-3})
+\end{equation}
+
+\begin{equation}
+\mathcal{L}_\xi g_{r\theta}=g_{rr}\partial_{\theta}\xi^r+g_{\theta\theta}\partial_{r}\xi^\theta=\mathcal{O}(r^{-2})
+\end{equation}
+
+\begin{equation}
+\mathcal{L}_\xi g_{r\varphi}=g_{rr}\partial_{\varphi}\xi^r+g_{\varphi\varphi}\partial_{r}\xi^\varphi+g_{\tau\varphi}\partial_{r}\xi^\tau=\mathcal{O}(r^{-1})
+\end{equation}
+
+\begin{equation}
+\mathcal{L}_\xi g_{\theta\theta}=\xi^\theta\partial_{\theta}g_{\theta\theta}+2g_{\theta\theta}\partial_{\theta}\xi^\theta=\mathcal{O}(r^{-1})
+\end{equation}
+
+\begin{equation}
+\mathcal{L}_\xi g_{\theta\varphi}=g_{\theta\theta}\partial_{\varphi}\xi^\theta+g_{\varphi\varphi}\partial_{\theta}\xi^\varphi+g_{\tau\varphi}\partial_{\theta}\xi^\tau=\mathcal{O}(r^{-1})
+\end{equation}
+
+\begin{equation}
+\mathcal{L}_\xi g_{\varphi\varphi}=\xi^\theta\partial_{\theta}g_{\varphi\varphi}+2(g_{\varphi\varphi}\partial_{\varphi}\xi^\varphi+g_{\tau\varphi}\partial_{\varphi}\xi^\tau)=\mathcal{O}(1)
+\end{equation}
+
+\noindent Treba napomenuti da smo za račun radili pomoću računalnog programa Mathematica, kod je priložen u dodatku \ref{cha:Mathematica}. Račun se može provesti i rukom, samo su računi dosta veliki\footnote{Svi računi su prvo provedeni ručno te su onda potvrđeni Mathematicom za svaki slučaj.}. Za primjer rješavanja ćemo uzeti jednadžbu \eqref{eq:ttjed}.
+
+\noindent Uvrstimo ansatz \eqref{eq:ansatz} te dobijemo
+
+\begin{equation}
+\begin{split}
+&(\xi^\theta_{-1}r+\xi^\theta_0+\xi^\theta_1r^{-1}+\mathcal{O}(r^{-2}))(-2\Omega\Omega'+2\Omega(\Lambda\Lambda'\Omega+(\Lambda^2-1)\Omega')r^2)+\\
+&+(\xi^r_{-1}r+\xi^r_0+\xi^r_1r^{-1}+\mathcal{O}(r^{-2}))(2\Omega^2(\Lambda^2-1)r)+\\
+&+2(\Omega^2(\Lambda^2-1)r^2-\Omega^2)(\partial_\tau\xi^\tau_{-1}r+\partial_\tau\xi^\tau_0+\partial_\tau\xi^\tau_1r^{-1}+\mathcal{O}(r^{-2}))+\\
+&+2(\Omega^2\Lambda^2r)(\partial_\tau\xi^\varphi_{-1}r+\partial_\tau\xi^\varphi_0+\partial_\tau\xi^\varphi_1r^{-1}+\mathcal{O}(r^{-2}))=\mathcal{O}(r^2)\\[1ex]
+&\mathcal{O}(r)+2\Omega^2(\Lambda\Lambda'\Omega+(\Lambda^2-1)\Omega')\xi^\theta_{-1}r^3+\mathcal{O}(r^2)+\\
+&+\mathcal{O}(r^2)+2\Omega^2(\Lambda^2-1)\partial_\tau\xi^\tau_{-1}r^3+\mathcal{O}(r^2)+\mathcal{O}(r)+\mathcal{O}(r^2)=\mathcal{O}(r^2)
+\end{split}
+\end{equation}
+
+\noindent Rubni uvjet nam definira najvišu neiščezavajuću potenciju dane jednadžbe. U ovom slučaju to je $r^2$, što znači da svi koeficijenti uz veće potencije moraju iščezavati. Ovdje je to samo $r^3$, da smo uzeli drugačiji ansatz (recimo sa još jednim članom uz $r^2$), imali bismo i više uvjeta, no pokazalo bi se da viši članovi ne doprinose difeomorfizmu.
+
+\noindent Dakle dobili smo jednadžbu
+
+\begin{equation}
+2\Omega^2(\Lambda^2-1)\partial_\tau\xi^\tau_{-1}+2\Omega^2(\Lambda\Lambda'\Omega+(\Lambda^2-1)\Omega')\xi^\theta_{-1}=0
+\end{equation}
+
+\noindent Istim postupkom dobivamo definicijske jednadžbe za koeficijente difeomorfizma
+
+{\setlength{\belowdisplayskip}{0pt} \setlength{\belowdisplayshortskip}{0pt}
+\setlength{\abovedisplayskip}{0pt} \setlength{\abovedisplayshortskip}{0pt}
+
+\begin{equation}
+\Omega^2(\Lambda^2-1)\xi^\tau_{-1}=0
+\end{equation}
+
+\begin{equation}
+\Omega^2\Lambda^2\xi^\varphi_{-1}=0
+\end{equation}
+
+\begin{equation}
+(\Lambda^2-2)\xi^\tau_{-1}-(\Lambda^2-1)\xi^\tau_{1}=0
+\end{equation}
+
+\begin{equation}
+\partial_\tau\xi^r_{-1}-2(\Lambda^2-1)\xi^\tau_{2}+\Lambda^2\xi^\varphi_{-1}-\Lambda^2\xi^\varphi_{1}=0
+\end{equation}
+
+\begin{equation}
+\Omega^2(\Lambda^2-1)\partial_\theta\xi^\tau_{-1}=0
+\end{equation}
+
+\begin{equation}
+\Lambda^2\partial_\theta\xi^\varphi_{-1}+(\Lambda^2-1)\partial_\theta\xi^\tau_{0}=0
+\end{equation}
+
+\begin{equation}
+\partial_\tau\xi^\theta_{-1}-\partial_\theta\xi^\tau_{-1}+(\Lambda^2-1)\partial_\theta\xi^\tau_{1}+\Lambda^2\partial_\theta\xi^\varphi_0=0
+\end{equation}
+
+\begin{equation}
+\partial_\tau\xi^\theta_{0}-\partial_\theta\xi^\tau_{0}+(\Lambda^2-1)\partial_\theta\xi^\tau_{2}+\Lambda^2\partial_\theta\xi^\varphi_1=0
+\end{equation}
+
+\begin{equation}
+\Omega^2(\Lambda^2-1)\partial_\varphi\xi^\tau_{-1}=0
+\end{equation}
+
+\begin{equation}
+2\Lambda(\Lambda'\Omega+\Omega'\Lambda)\xi^\theta_{-1}+\Omega(\Lambda^2-1)\partial_\varphi\xi^\tau_0+\Lambda^2\Omega\partial_\tau\xi^\tau_{-1}+\Lambda^2\Omega\partial_\varphi\xi^\varphi_{-1}=0
+\end{equation}
+
+\begin{equation}
+2(\Lambda\Omega\Lambda'+\Omega')\xi^\theta_0-\Omega\partial_\varphi\xi^\tau_{-1}+\Omega(\Lambda^2-1)\partial_\varphi\xi^\tau_1+\Omega\Lambda^2(\partial_\tau\xi^\tau_0+\partial_\tau\xi^\varphi_{-1}+\partial_\varphi\xi^\varphi_0+\xi^r_{-1})=0
+\end{equation}
+
+\begin{equation}
+2\Omega\Omega'\xi^\theta_{-1}=0
+\end{equation}
+
+\begin{equation}
+2\Omega\Omega'\xi^\theta_{0}=0
+\end{equation}
+
+\begin{equation}
+\xi^\theta_{-1}=0
+\end{equation}
+
+\begin{equation}
+\partial_\theta\xi^r_{-1}=0
+\end{equation}
+
+\begin{equation}
+\Lambda^2\xi^\tau_{-1}=0
+\end{equation}
+
+\begin{equation}
+\Lambda^2\xi^\varphi_{-1}=0
+\end{equation}
+
+\begin{equation}
+\Omega\partial_\theta\xi^\theta_{-1}+\Omega'\xi^\theta_{-1}=0
+\end{equation}
+
+\begin{equation}
+\Omega\partial_\theta\xi^\theta_0+\Omega'\xi^\theta_0=0
+\end{equation}
+
+\begin{equation}
+\partial_\theta\xi^\tau_{-1}=0
+\end{equation}
+
+\begin{equation}
+\partial_\varphi\xi^\theta_{-1}+\Lambda^2(\partial_\theta\xi^\tau_0+\partial_\theta\xi^\varphi_{-1})=0
+\end{equation}
+
+\begin{equation}
+\partial_\varphi\xi^\theta_0+\Lambda^2(\partial_\theta\xi^\tau_1+\partial_\theta\xi^\varphi_0)=0
+\end{equation}
+
+\begin{equation}
+\partial_\varphi\xi^\theta_{-1}=0
+\end{equation}
+
+\begin{equation}
+\Omega\left((\partial_\varphi\xi^\tau_0+\partial_\varphi\xi^\varphi_{-1})\Lambda+\Lambda'\xi^\theta_{-1}\right)+\Lambda\Omega'\xi^\theta_{-1}=0
+\end{equation}
+}
+
+\noindent Treba napomenuti da smo izostavili eksplicitne ovisnosti komponenata, no imamo na umu da one ovise o $\tau,\ \theta$ i $\varphi$, isto kao i $\Lambda$ i $\Omega$.
+
+\noindent Nakon što pojednostavimo dobivamo
+
+\begin{equation}
+\begin{array}{c @{{}={}} c @{\qquad} c @{{}={}} c @{\qquad} c @{{}={}} c}
+\xi^\tau_{-1} & 0 & \xi^\varphi_{-1} & 0 & \xi^\tau_1 & 0\\
+\xi^\theta_{-1} & 0 & \partial_\theta\xi^\tau_{0} & 0 & \partial_\theta\xi^\varphi_0 & 0\\
+\partial_\varphi\xi^\tau_0 & 0 & \xi^\theta_0 & 0 & \partial_\theta\xi^r_{-1} & 0\\
+\end{array}
+\end{equation}
+
+\noindent Jedine bitne jednadžbe koje su nam ostale su 
+
+\begin{equation}
+\partial_\tau\xi^r_{-1}-2(\Lambda^2-1)\xi^\tau_{2}-\Lambda^2\xi^\varphi_{1}=0
+\end{equation}
+
+\begin{equation}
+(\Lambda^2-1)\partial_\theta\xi^\tau_{2}+\Lambda^2\partial_\theta\xi^\varphi_1=0
+\end{equation}
+
+\begin{equation}
+\partial_\tau\xi^\tau_0+\partial_\varphi\xi^\varphi_0+\xi^r_{-1}=0
+\label{eq:rfijed}
+\end{equation}
+
+\noindent Ako na jednadbžu \eqref{eq:rfijed} djelujemo sa $\partial_\varphi$ možemo iskoristiti Schwarzov uvjet integrabilnosti, odnosno simetriju drugih derivacija.
+
+\begin{equation*}
+\partial_{ij}=\partial_{ji}
+\end{equation*}
+
+\begin{equation*}
+\overbrace{\partial_\varphi\partial_\tau\xi^\tau_0}^{\equiv\partial_\tau\partial_\varphi\xi^\tau_0\xrightarrow{\text{(B.40)}}0}+\partial_\varphi\partial_\varphi\xi^\varphi_0+\partial_\varphi\xi^r_{-1}=0
+\end{equation*}
+
+\noindent što nam ostavlja jednostavnu diferencijalnu jednadžbu koju možemo integrirati 
+
+\begin{equation*}
+\partial_\varphi\partial_\varphi\xi^\varphi_0(\tau,\varphi)+\partial_\varphi\xi^r_{-1}(\tau,\varphi)=0\Big/ \int
+\end{equation*}
+
+\begin{equation}
+\xi^r_{-1}=C(\tau)-\partial_\varphi\xi^\varphi_0
+\label{eq:vezarfi}
+\end{equation}
+
+\noindent Na kraju možemo napisati zasebne komponente difeomorfizma
+
+\begin{equation}
+\begin{split}
+\xi^\tau&=C_1(\tau)+\xi^\tau_2r^{-2}+\mathcal{O}(r^{-3})\\
+\xi^r&=\xi^r_{-1}+\mathcal{O}(1)\\
+\xi^\theta&=\xi^\theta_1r^{-1}+\mathcal{O}(r^{-2})=\mathcal{O}(r^{-1})\\
+\xi^\varphi&=\xi^\varphi_0+\xi^\varphi_1r^{-1}+\mathcal{O}(r^{-2})
+\end{split}
+\end{equation}
+
+\noindent Usporedbom sa člankom \citep{Guica:2008mu} vidimo da konstanta u $\tau$ komponenti ne ovisi o $\tau$, te da su $\xi^\tau_2=0$ i $\xi^\varphi_1=0$. Ako stavimo, u jednadžbu \eqref{eq:vezarfi}, da nam je $C(\tau)=0$ te da su  $\xi^\varphi_0=\epsilon(\varphi)$ tada je $\xi^r_{-1}=-\epsilon'(\varphi)$. Što se slaže sa člankom. 
+
+\noindent U konačnici smo reproducirali difeomorfizam
+
+\begin{equation}
+\xi=[C+\mathcal{O}(r^{-3})]\partial_\tau+[-r\epsilon'(\varphi)+\mathcal{O}(1)]\partial_r+\mathcal{O}(r^{-1})\partial_\theta+[\epsilon(\varphi)+\mathcal{O}(r^{-2})]\partial_\varphi
+\end{equation}
+
+\noindent Jedno od mogućih objašnjenja razloga što smo zanemarili $\tau$ ovisnost je to da nam egzaktni Killingov vektor koji generira rotacijsku $U(1)$ izometriju nema $\tau$ ovisnosti. To također objašnjava izbor funkcije $\epsilon(\varphi)$.
+
+\noindent Sada kada imamo generator, možemo provjeriti da li on zadovoljava Virasoro algebru. Uz $\epsilon(\varphi)=-e^{-in\varphi}$ difeomorfizam $\xi$ je oblika
+
+\begin{equation}
+\xi_n=-e^{-in\varphi}\partial_\varphi-i n r e^{-in\varphi}\partial_r
+\end{equation}
+
+\noindent Kao što smo rekli, izbor je motiviran $U(1)$ izometrijom, jer za $n=0$ dobivamo generator $\xi_0$ koji je upravo generator $U(1)$ rotacijske izometrije.
+
+\noindent Liejeva zagrada je dana izrazom
+
+\begin{equation}
+[\xi_m,\xi_n]=(\xi_m^\nu\partial_\nu\xi^\mu_n-\xi^\nu_n\partial_\nu\xi^\mu_m)\partial_\mu
+\end{equation}
+
+\noindent Uvrštavamo $r$ i $\varphi$ komponente difeomorfizma
+
+\begin{equation*}
+\begin{split}
+[\xi_m,\xi_n]&=(\xi^\nu_m\partial_\nu\xi^r_n-\xi^\nu_n\partial_\nu\xi^r_m)\partial_r+(\xi^\nu_m\partial_\nu\xi^\varphi_n-\xi^\nu_n\partial_\nu\xi^\varphi_m)\partial_\varphi=\\
+&=(\xi^r_m\partial_r\xi^r_n+\xi^\varphi_m\partial_\varphi\xi^r_n-\xi^r_n\partial_r\xi^r_m-\xi^\varphi_n\partial_\varphi\xi^r_m)\partial_r+\\
+&+(\xi^r_m\partial_r\xi^\varphi_n+\xi^\varphi_m\partial_\varphi\xi^\varphi_n-\xi^r_n\partial_r\xi^\varphi_m-\xi^\varphi_n\partial_\varphi\xi^\varphi_m)\partial_\varphi=\\
+&=[-imre^{-im\varphi}\cdot(-inre^{-in\varphi})+(-e^{-im\varphi})\cdot(-n^2r e^{-in\varphi})-\\
+&-(-inre^{-in\varphi})\cdot(-ime^{-im\varphi})-(-e^{-im\varphi})\cdot(-m^2re^{-im\varphi})]\partial_r+\\
+&+[(-e^{-im\varphi})\cdot(ine^{-in\varphi})-(-e^{-in\varphi})\cdot(ime^{-im\varphi})]\partial_\varphi=\\
+&=[re^{-i(m+n)\varphi}(n^2-m^2)]\partial_r+[-ie^{-i(n+m)\varphi}(n-m)]\partial_\varphi=\\
+&=(m-n)[ie^{-i(m+n)\varphi}\partial_\varphi-(m+n)re^{-i(m+n)\varphi}\partial_r]
+\end{split}
+\end{equation*}
+
+\noindent Ako gornji izraz pomnožimo sa $i$, vidimo da uz
+
+\begin{equation*}
+\xi_{m+n}=-e^{-i(m+n)\varphi}\partial_\varphi-i(m+n)re^{-i(m+n)\varphi}\partial_r
+\end{equation*}
+
+\noindent dobivamo upravo izraz za Virasoro algebru bez centralnog člana
+
+\begin{equation}
+i[\xi_m,\xi_n]=(m-n)\xi_{m+n}
+\end{equation}
+
+Možemo rezimirati bitnije rezultate dobivene u člancima \citep{Guica:2008mu,Matsuo:2009sj,Matsuo:2009pg} u jednoj tablici u kojoj ćemo navesti njihove rubne uvjete, dobivene difeomorfizme i algebre pojedinih modova.
+
+\newpage
+
+
+\begin{sidewaystable}
+\resizebox{\textwidth}{!}{
+    \centering
+   \begin{tabular}{c|c|c|c}
+    \textbf{Rubni uvjeti} & \textbf{Difeomorfizam} & \textbf{Lijevi modovi U(1)} & \textbf{Desni modovi SL(2,$\mathbb{R}$)} \\ \hline
+    
+    Guica et. al. \citep{Guica:2008mu} & & & \\
+    $\mathcal{O}\left(\begin{array}{cccc}
+    r^2 & r^{-2} & r^{-1} & 1 \\
+        & r^{-3} & r^{-2} & r^{-1} \\
+        &        & r^{-1} & r^{-1} \\
+        &        &        & 1 
+    \end{array}\right)$ &  $\begin{array}{c}\xi=[C+\mathcal{O}(r^{-3})]\partial_\tau+\\
+    +[-r\epsilon'(\varphi)+\mathcal{O}(1)]\partial_r+\mathcal{O}(r^{-1})\partial_\theta+\\
+    +[\epsilon(\varphi)+\mathcal{O}(r^{-2})]\partial_\varphi\\ \end{array}$
+     & $\begin{array}{c}\xi_\epsilon=\epsilon(\varphi)\partial_\varphi-r\epsilon'(\varphi)\partial_r\\ \epsilon_n(\varphi)=-e^{-in\varphi},\ \xi_n=\xi(\epsilon_n)\\ \\ i[\xi_m,\xi_n]=(m-n)\xi_{m+n}\\ \\ U(1)\ \textrm{je pojačana u Virasoro.} \\ \textrm{Centralni naboj je:}\ c_L=12J/\hbar  \\ \\\end{array}$ &
+     $\begin{array}{c}
+     \textrm{Nema pojačavajna}\ SL(2,\mathbb{R} )\ \textrm{u Virasoro.}\\
+     \end{array}$\\  \hline
+     % % %
+     
+	Matsuo et. al. \citep{Matsuo:2009sj} & & & \\
+   $\mathcal{O}\left(\begin{array}{cccc}
+    1 & r^{-3} & r^{-3} & r^{-2} \\
+        & r^{-4} & r^{-4} & r^{-3} \\
+        &        & r^{-3} & r^{-3} \\
+        &        &        & r^{-2} 
+    \end{array}\right)$ &  $\begin{array}{c}\xi=[\epsilon(\tau)+\frac{\epsilon''(\tau)}{2r^2}+\mathcal{O}(r^{-3})]\partial_\tau+\\
+    +[-r\epsilon'(\tau)+\frac{\epsilon'''(\tau)}{2r}+\mathcal{O}(r^{-2})]\partial_r+\mathcal{O}(r^{-3})\partial_\theta+\\
+    +[C-\frac{\epsilon''(\tau)}{r}+\mathcal{O}(r^{-3})]\partial_\varphi\\ \\\end{array}$
+     &$\begin{array}{c}
+          U(1)\ \textrm{se ne pojačava u Virasoro.}\\
+       \end{array}$ & $\begin{array}{c}\xi_\epsilon=\epsilon(\tau)\partial_\tau-r\epsilon'(\tau)\partial_r\\ \epsilon(\tau)=\tau^{1+n} \\ \\ {}[\xi_n,\xi_m]=(m-n)\xi_{m+n}\\ \\SL(2,\mathbb{R})\ \textrm{se pojačava u Virasoro,} \\ \textrm{ali bez centralnog naboja:}\ c_R=0 \\ \textrm{Postoji kvazilokalni naboj} \\  \textrm{dobiven iz Brown-York tenzora.}\\ \\\end{array}$\\  \hline
+     % % %
+     
+	Matsuo et. al. \citep{Matsuo:2009pg} & & & \\
+   $\mathcal{O}\left(\begin{array}{cccc}
+    r^2 & r^{-1} & r^{-2} & 1 \\
+        & r^{-3} & r^{-3} & r^{-1} \\
+        &        & r^{-1} & r^{-1} \\
+        &        &        & 1 
+    \end{array}\right)$ &  $\begin{array}{c}\xi=[\epsilon_\tau(\tau)+\mathcal{O}(r^{-1})]\partial_\tau+\\
+    +[-r\epsilon'_\tau(\tau)-r\epsilon'_\varphi(\varphi)+\mathcal{O}(1)]\partial_r+\mathcal{O}(r^{-1})\partial_\theta+\\
+    +[\epsilon_\varphi(\varphi)+\mathcal{O}(r^{-1})]\partial_\varphi\end{array}$
+     & $\begin{array}{c}l_n=\epsilon_\varphi(\varphi)\partial_\varphi-r\epsilon'_\varphi(\varphi)\partial_r\\ \epsilon_n(\varphi)=-e^{-in\varphi}\\ \\ i[l_n,l_m]=(n-m)l_{m+n}\\ \\ U(1)\ \textrm{je pojačana u Virasoro s}\\ \textrm{centralnim nabojem:}\ c_L=12J/\hbar\\ \\\end{array}$
+     &
+     $\begin{array}{c}\bar{l}_n=-i\epsilon_\tau(\tau)\partial_\tau+ir\epsilon'_\tau(\tau)\partial_r\\ \epsilon_\tau(\tau)=\tau^{1+n}\\ \\ i[\bar{l}_n,\bar{l}_m]=(n-m)\bar{l}_{m+n}\\ \\ SL(2,\mathbb{R})\ \textrm{je pojačana u Virasoro s} \\ \textrm{centralnim nabojem:} \ c_R=0 \\ \\\end{array}$\\  \hline
+    \end{tabular}}
+    \caption{Tablica prikazuje usporedbu različitih rubnih uvjeta danih u radovima \citep{Guica:2008mu, Matsuo:2009sj, Matsuo:2009pg} te rezultirajuće algebre i centralne naboje.}
+\end{sidewaystable}
+
+
+
+
+
+
+

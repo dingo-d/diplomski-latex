@@ -1,0 +1,199 @@
+%%% Paketi
+
+%% Za pdfTeX
+\usepackage{ifpdf}
+\usepackage{ifthen}
+
+%% Osnovni paketi
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{fourier}% fontovi -Utopia ili neki drugi ja koristim garamond
+%\usepackage[utopia]{mathdesign}
+%\renewcommand*{\rmdefault}{mdugm}
+%\usepackage{pxfonts}
+\usepackage{tgtermes}
+%\usepackage{emerald}
+%\usepackage[urw-garamond]{mathdesign}
+%\usepackage{lucidabr}
+\usepackage[kerning=true,babel=true]{microtype}
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage[headheight=15pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage{natbib}
+\setcitestyle{square,numbers,comma}
+\usepackage{cancel} % paket za križanje članova
+
+%% Ostali paketi
+
+% Matematika
+\usepackage{amsmath}
+%\usepackage{amssymb} javlja error kad se koristi amssymb, provjeriti to!
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{wasysym} %astro objekti
+
+% Vizuali
+\usepackage{lettrine} % za veliko početno slovo
+\renewcommand{\LettrineFontHook}{\color[gray]{0.4}}
+%\usepackage{tikz}
+%\usetikzlibrary{arrows,patterns,plotmarks,backgrounds,shapes,shadows,,arrows}
+
+%% Boje
+
+%\definecolor{zut}{RGB}{253,200,0}
+%\definecolor{nar}{RGB}{240,95,0}
+%\definecolor{pla}{RGB}{134,206,255}
+\definecolor{DarkGray}{RGB}{92,92,92}
+
+% Izgled dokumenta (layout)
+\usepackage[margin=10pt,font=small,labelfont=bf, labelsep=endash]{caption}
+%\usepackage[center]{caption} % prije subfig
+\usepackage{subfig} % nekoliko figura u jednoj (zamjena za subfigure)
+\usepackage{pdfpages} % uključivanje pdf-a
+\usepackage{titlesec}
+\usepackage{wrapfig}
+\usepackage[nottoc]{tocbibind}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\setlength{\heavyrulewidth}{0.2em}
+
+% Korisno
+\usepackage{lastpage}
+\usepackage[utopia]{quotchap}
+\renewcommand{\chapnumfont}{\fontsize{100}{130}\selectfont\color{chaptergrey}}
+
+%% Babel
+\usepackage[croatian]{babel}
+\usepackage[babel]{csquotes}
+%\MakeAutoQuote{«}{»}
+\usepackage[hyphens]{url}
+
+%% Za fancyhdr da može koristiti velika slova
+\makeatletter
+\adddialect\l@CROATIAN\l@croatian
+\makeatother
+
+
+%% hyperref, xcolor mora biti loadan prije toga
+\usepackage{graphicx}  % Za korištenje grafike
+\usepackage{pstricks}
+\usepackage{pdflscape}
+\usepackage[hyperindex, colorlinks=true, linkcolor=DarkGray, citecolor=DarkGray, urlcolor=DarkGray, plainpages=false, pdfpagelabels, hypertexnames=false, unicode]{hyperref}
+%%Dodaci za pofarbane citate i linkove
+% colorlinks=true, urlcolor=DarkOrchid, citecolor=ForestGreen, linkcolor=MidnightBlue, hidelinks %
+
+%\usepackage[all]{hypcap}
+
+\usepackage[toc,page]{appendix}
+
+\usepackage[bottom]{footmisc}
+
+%% tablice - sideways
+
+\usepackage{rotating}
+
+
+
+%%% Custom komande
+
+\newcommand{\ornamentChapter}{\begin{center}\begin{Large}\textorn{2}\end{Large}\end{center}}
+%% Centriranje kolumne redaka u multiline okruženju
+\renewcommand\multirowsetup{\centering}
+
+%% Stvaranje neke vrste centra širine stupca 1.5cm
+\newcolumntype{D}{>{\centering}p{1.5cm}}
+
+%% Bilješke u margini sa strane
+\newcommand{\note}[1]{\marginpar{%
+  \vskip-\baselineskip % malo podizanje marginpar
+  \raggedright\footnotesize
+  \color{red}{\itshape\hrule\smallskip#1}\par\smallskip\hrule}}
+\newcommand{\nonotes}{\renewcommand{\note}[1]{}}
+
+%% Strong %%
+\DeclareRobustCommand{\strong}[1]{%
+    \textbf{#1}%
+}
+
+%% Zahvala/posveta %%
+\DeclareRobustCommand{\dedicace}[1]{%
+    \clearemptydoublepage
+    \thispagestyle{empty}
+    \vspace*{\stretch{1}}\par
+    {\begin{flushright}#1\end{flushright}\par}
+    \vspace*{\stretch{2}}
+}
+
+%% Na paragrafu (granici između dvije grupe paragrafa)%%
+\DeclareRobustCommand{\surparagraph}{%
+    \par\medskip
+}
+
+%% Korištenje klasičnih oznaka (ne garamond) za kaligrafski L i O 
+\DeclareMathAlphabet{\xcal}{OMS}{cmsy}{m}{n}
+\newcommand{\Lie}{\xcal{L}}
+\newcommand{\bigo}{\xcal{O}}
+
+%% Redefinicija derivacija radi jednostavnosti
+\newcommand{\fd}[2]{\frac{d{#1}}{d{#2}}} %first derivative%
+\newcommand{\sd}[2]{\frac{d^2{#1}}{d{#2}^2}} %second derivative%
+\newcommand{\fpd}[2]{\frac{\partial{#1}}{\partial{#2}}} %first partial derivative%
+\newcommand{\spd}[2]{\frac{\partial^2{#1}}{\partial{#2}^2}} %second partial derivative%
+\newcommand{\mpd}[3]{\frac{\partial^2{#1}}{\partial{#2}\partial{#3}}}
+%mixed partial derivatives
+
+
+%%% Postavke dokumenta
+
+%% URL u istom fontu kao i ostatak
+\urlstyle{rm}
+
+%% Dubina tablice sadržaja
+\setcounter{tocdepth}{2}
+%\setcounter{secnumdepth}{8}
+
+% Definiramo razmak za cijeli dokument
+\onehalfspacing
+
+% Modifikacija Sadržaja - opcija titletoc
+\usepackage{titletoc}
+\titlecontents{part}
+[3pc]
+{\addvspace{1.5pc}\filcenter\hrule height 1pt \Large{\textbf{Partie}}~}
+{\Large\textbf}
+{\Large\textbf}
+{}
+[\hrule height 1pt\addvspace{.5pc}]
+
+
+
+
+%% Briše footer i header na praznim stranicama u paru
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{%
+    \clearpage
+    {\pagestyle{empty}\origdoublepage}%
+}
+\let\cleardoublepage\clearemptydoublepage
+
+%% Definicije i teoremi ako je potrebno
+
+\newtheoremstyle{dotless}{}{}{\itshape}{}{\bfseries}{}{ }{}
+
+\theoremstyle{dotless}
+\newtheorem*{mydef*}{Definicija}
+
+%% povišeni \chi da ne bude dolje
+
+\DeclareRobustCommand{\rchi}{{\mathpalette\irchi\relax}}
+\newcommand{\irchi}[2]{\raisebox{\depth}{$#1\chi$}} % inner command, used by \rchi
+
+
+
